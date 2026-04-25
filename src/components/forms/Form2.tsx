@@ -1,12 +1,12 @@
 "use client";
+import { getDateInputLimits } from "@/hooks/getDateInputLimits";
 import useBookingForm from "@/hooks/useBookingForm";
-import { ArrowUpIcons, FromDropDown } from "@/utils/icons";
-import { countries } from "../../utils/constent";
 import { CalendarIcon, CallIcon, MailIcon, UserIcon } from "@/utils/formIcons";
+import { ArrowUpIcons, FromDropDown } from "@/utils/icons";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { getDateInputLimits } from "@/hooks/getDateInputLimits";
-import React, { useState } from "react";
+import { countries } from "../../utils/constent";
 
 interface Props {
   gridView?: boolean;
@@ -19,10 +19,14 @@ const Form2 = ({ gridView }: Props) => {
     formData,
     handleChange,
     setFieldValue,
+    submitSuccess,
   } = useBookingForm({
     includeCheckIn: true,
     includeCheckOut: true,
-    onSubmitSuccess: () => {},
+    onSubmitSuccess: () => {
+      setStartDate(null);
+      setEndDate(null);
+    },
   });
   const { min, max } = getDateInputLimits({
     showPast: false,
@@ -84,6 +88,12 @@ const Form2 = ({ gridView }: Props) => {
       icon: <CalendarIcon />,
     },
   ];
+  // useEffect(() => {
+  //   if (submitSuccess) {
+  //     setStartDate(null);
+  //     setEndDate(null);
+  //   }
+  // }, [submitSuccess]);
 
   return (
     <form
@@ -107,7 +117,12 @@ const Form2 = ({ gridView }: Props) => {
                 minDate={minDate}
                 maxDate={maxDate}
                 placeholderText={field.label}
-                className={`${gridView ? "" : "border-p1  md:border-r"} outline-none w-full h-full bg-transparent text-base text-dark  placeholder:text-white focus:outline-none text-white `}
+                // ✅ KEY FIX
+                // withPortal
+                // optional styling
+                calendarClassName="!z-[99999]"
+                popperClassName="!z-[99999]"
+                className={`${gridView ? "" : "border-p1 md:border-r"} pointer-events-auto placeholder:text-white outline-none w-full h-full bg-transparent text-base text-white`}
                 wrapperClassName="w-full h-full !flex items-center"
               />
             </div>
@@ -124,7 +139,7 @@ const Form2 = ({ gridView }: Props) => {
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
                   style={{ width: `${formData.countryCode.length * 2}ch` }}
-                   aria-label="Country Code"
+                  aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
                     <option key={index} value={country.code} className="">
@@ -168,7 +183,10 @@ const Form2 = ({ gridView }: Props) => {
           )}
         </React.Fragment>
       ))}
-      <button type="submit" className="bg-p1 bg-secondary rounded-full text-white text-lg py-3">
+      <button
+        type="submit"
+        className="bg-p1 bg-secondary rounded-full text-white text-lg py-3"
+      >
         {isSubmitting ? (
           "Submitting..."
         ) : (

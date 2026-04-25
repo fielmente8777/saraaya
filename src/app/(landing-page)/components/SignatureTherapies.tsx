@@ -14,10 +14,7 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
   therapies,
 }) => {
   return (
-    <SectionWithContainer
-      sectionClassName="bg-background2"
-      containerClassName="relative"
-    >
+    <SectionWithContainer sectionClassName="bg-background2 pointers-events-none">
       <SwiperCarousel
         data={therapies}
         slidesPerView={1}
@@ -31,6 +28,7 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
         fadeEffect={{ crossFade: true }}
         loop={true}
         speed={800}
+        className=""
         renderSlide={(therapie) => (
           <div className="w-full">
             <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
@@ -88,22 +86,6 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
           </div>
         )}
       />
-
-      {/* <div className="flex items-center justify-between">
-        <LinkButton
-          href={cta.href}
-          label={cta.label}
-          className="w-fit mx-auto text-primary rounded-full"
-        />
-        <div className="flex items-center gap-4">
-          <button className="therapies-next text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95 rotate-180">
-            <SlideBtnIcon />
-          </button>
-          <button className="therapies-prev text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95">
-            <SlideBtnIcon />
-          </button>
-        </div>
-      </div> */}
     </SectionWithContainer>
   );
 };

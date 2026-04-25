@@ -18,7 +18,12 @@ const Banner: React.FC<BannerProps> = ({ images }) => {
       <nav className="absolute inset-x-0 flex items-center justify-center top-0 z-20 py-8">
         <Container className="flex items-center justify-between w-full">
           <div className="relative md:w-40.25 w-30 aspect-4/2">
-            <Image src="/logo-1.png" alt="logo" fill className="object-cover rounded-md" />
+            <Image
+              src="/logo-1.png"
+              alt="logo"
+              fill
+              className="object-cover rounded-md"
+            />
           </div>
           <LinkButton
             href={contact.WhatsappCta}
