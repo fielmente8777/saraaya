@@ -6,7 +6,7 @@ export const landingPageData = {
     images: [
       "/bnr-1.png",
       "/bnr-2.png",
-      "/bnr-3.png",
+      // "/bnr-3.png",
       "/bnr-4.png",
       "/bnr-5.png",
       "/bnr-6.png",
