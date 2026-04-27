@@ -1,7 +1,7 @@
 export const enCodeText = encodeURIComponent(`Hello Arkaya Team   
 I’m interested to know more about Saraaya.`);
 export const contact = {
-  email: "lorem@ipsumdolor.com",
+  email: "info@saraayaglamps.com",
   mapUrl:"",
   phone: ["+91 78766 24372"],
   address:
@@ -13,7 +13,8 @@ export const contact = {
     linkedin: "https://in.linkedin.com/",
   },
   WhatsappCta: `https://wa.me/+918869817528?text=${enCodeText}`,
-  formDomain: "testmulti", //for testing
+  formDomain: "saraayaglamps",
+  // formDomain: "testmulti", //for testing
   formHid:"",
 };
 
