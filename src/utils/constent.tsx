@@ -1,4 +1,4 @@
-export const enCodeText = encodeURIComponent(`Hello Arkaya Team   
+export const enCodeText = encodeURIComponent(`Hello Saraaya Team   
 I’m interested to know more about Saraaya.`);
 export const contact = {
   email: "info@saraayaglamps.com",
