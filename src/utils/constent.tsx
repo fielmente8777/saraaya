@@ -8,9 +8,9 @@ export const contact = {
     "Village Nauhali, Dharamshala 176217",
   addressLink: "https://maps.app.goo.gl/UNE7MTPTh84gEPhW7",
   socialMedia: {
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
-    linkedin: "https://in.linkedin.com/",
+    facebook: "https://www.facebook.com/share/1LsNztG2je/?mibextid=wwXIfr",
+    instagram: "https://www.instagram.com/saraaya.dharamshala?igsh=eWN4c24wcGI0bXdy",
+    linkedin: "",
   },
   WhatsappCta: `https://wa.me/+918869817528?text=${enCodeText}`,
   formDomain: "saraayaglamps",

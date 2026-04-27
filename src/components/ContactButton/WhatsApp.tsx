@@ -11,7 +11,7 @@ function Whatsapp({ whatsAppNumber }: { whatsAppNumber: string }) {
     return null;
   }
   return (
-    <div className={`fixed bottom-10 lg:right-3 right-4 z-20 cursor-pointer`}>
+    <div className={`fixed bottom-24 lg:left-3 left-4 z-20 cursor-pointer`}>
       <Link
         href={`https://wa.me/${whatsAppNumber.replace(/\s+/g, "")}?text=${enCodeText}`}
         target="_blank"

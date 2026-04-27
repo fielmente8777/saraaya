@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import Call from "@/components/ContactButton/Call";
 import { contact } from "@/utils/constent";
 import Whatsapp from "@/components/ContactButton/WhatsApp";
+import Script from "next/script";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -68,6 +69,19 @@ export default function RootLayout({
         <Footer />
         <Whatsapp whatsAppNumber={contact.phone[0]} />
         <Call callNumber={contact.phone[0]} />
+        {/* <!-- Eazbot Script (Next.js) --> */}
+        <Script id="chatbot-config" strategy="afterInteractive">
+          {`
+            window.eazbotConfig = {
+              ndid: "48efe4a5-80fe-4f2a-9615-9e4f98dc57a3",
+              hid: "61357866",
+            };
+          `}
+        </Script>
+        <Script
+          src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
