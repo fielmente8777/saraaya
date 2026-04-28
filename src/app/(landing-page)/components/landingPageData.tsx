@@ -72,7 +72,6 @@ export const landingPageData = {
           "/rooms/Premium-3.png",
           "/rooms/Premium-4.png",
           "/rooms/Premium-5.png",
-          "/rooms/Premium-6.png",
         ],
       },
     ],
