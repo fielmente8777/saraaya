@@ -1,5 +1,5 @@
 "use client";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import SwiperCarousel from "./SwiperCarousel";
 import Image from "next/image";
 
@@ -10,7 +10,11 @@ const BannerSlider = ({ images }: { images: string[] }) => {
         data={images}
         slidesPerView={1}
         spaceBetween={0}
-        modules={[Navigation]}
+        modules={[Navigation,Autoplay]}
+        loop
+        speed={800}
+        autoplay={{ delay: 3500 }}
+        
         navigation={{
           nextEl: ".banner-next",
           prevEl: ".banner-prev",

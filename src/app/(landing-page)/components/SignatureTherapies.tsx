@@ -42,12 +42,12 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
               </div>
               <div className="w-full flex flex-col justify-center space-y-6">
                 <SectionHeading title={title} fontPrimary />
-                <div className="w-full relative aspect-4/3.5 image-border md:hidden">
+                <div className="w-full relative aspect-4/3.75 image-border md:hidden">
                   <Image
                     src={therapie.src}
                     alt={therapie.name}
                     fill
-                    className="object-cover rounded-3xl"
+                    className="object-cover rounded-2xl"
                   />
                 </div>
                 <div className="w-12 aspect-4/4 relative ">

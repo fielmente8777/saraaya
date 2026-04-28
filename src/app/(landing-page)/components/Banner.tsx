@@ -34,7 +34,7 @@ const Banner: React.FC<BannerProps> = ({ images }) => {
           />
         </Container>
       </nav>
-      <div className="flex items-center gap-4 absolute bottom-5 md:right-20 right-10 z-20">
+      <div className="md:flex hidden items-center gap-4 absolute bottom-5 md:right-20 right-10 z-20">
         <button
           className={`text-primary px-5 py-2 rounded-full bg-white active:scale-95 banner-prev`}
         >
