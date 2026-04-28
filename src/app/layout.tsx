@@ -90,6 +90,8 @@ export default function RootLayout({
         {/* <!-- Google tag (gtag.js) --> */}
         <Script
           async
+          id="google-tag-manager"
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-PVZG7NGGMG"
         ></Script>
         <Script id="google-analytics" strategy="afterInteractive">

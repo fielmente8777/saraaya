@@ -12,7 +12,7 @@ export const landingPageData = {
   },
   about: {
     title:
-      "A Glamping Retreat <br/><span class='text-secondary italic'>in the <i>Himalayas</i></span>",
+      "A Glamping Retreat <br/><span class='text-secondary italic'>in the Dharamshala, <i>Himalayas</i></span>",
     description:
       "Saraaya is a luxury glamping retreat located in the forests above Dharamshala in Himachal Pradesh- Built beside a pristine glacier stream flowing from sacred alpine lakes, Saraaya brings together the untamed beauty of the Himalayas and every comfort of a fine stay, four glamp rooms, one extraordinary wilderness.",
     location: {
