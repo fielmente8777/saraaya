@@ -6,10 +6,8 @@ export const landingPageData = {
     images: [
       "/bnr-1.png",
       "/bnr-2.png",
-      // "/bnr-3.png",
+      "/bnr-3.png",
       "/bnr-4.png",
-      "/bnr-5.png",
-      "/bnr-6.png",
     ],
   },
   about: {
@@ -58,18 +56,23 @@ export const landingPageData = {
       {
         title: "Mountain View Tents",
         images: [
-          "/rooms/Mountain-1.webp",
-          "/rooms/Mountain-2.webp",
-          "/rooms/Mountain-3.webp",
-          "/rooms/Mountain-4.webp",
+          "/rooms/Mountain-1.png",
+          "/rooms/Mountain-2.png",
+          "/rooms/Mountain-3.png",
+          "/rooms/Mountain-4.png",
+          "/rooms/Mountain-5.png",
+          "/rooms/Mountain-6.png",
         ],
       },
       {
         title: "Premium View Tents",
         images: [
-          "/rooms/Premium-1.webp",
-          "/rooms/Premium-2.webp",
-          "/rooms/Premium-3.webp",
+          "/rooms/Premium-1.png",
+          "/rooms/Premium-2.png",
+          "/rooms/Premium-3.png",
+          "/rooms/Premium-4.png",
+          "/rooms/Premium-5.png",
+          "/rooms/Premium-6.png",
         ],
       },
     ],
