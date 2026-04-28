@@ -111,7 +111,7 @@ export const landingPageData = {
   },
   testimonialData: {
     title: "Guest <i>Experiences</i>",
-    images: ["/guest-1.png", "/guest-2.png", "/guest-3.png", "/guest-4.webp"],
+    images: ["/guest-1.png", "/guest-2.png", "/guest-3.png", "/guest-4.png", "/guest-5.png"],
     testimonials: [
       {
         text: "We didn’t just “reach” Saraaya you actually walk the last stretch, and that changes the whole experience. By the time you arrive, it already feels like you’ve left everything behind. No traffic, no noise just silence and space. The tents are beautifully done, but what really stays with you is the feeling of being completely cut off (in a good way). Mornings here feel unreal. Definitely not for people looking for an easy, hotel-like stay. But if you want something different, this place delivers.",
