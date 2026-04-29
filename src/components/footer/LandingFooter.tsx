@@ -38,7 +38,7 @@ const LandingFooter = () => {
               className={`${index === 1 ? "lg:w-fit lg:ml-auto" : ""} flex flex-col gap-4 md:gap-6`}
               key={index}
             >
-              <div className="md:space-y-4 space-y-2">
+              <div className="md:space-y-4 space-y-2 line2">
                 <h2
                   className="md:text-5xl text-white font-eb  text-3xl font-primary"
                   dangerouslySetInnerHTML={{ __html: list.title ?? "" }}
