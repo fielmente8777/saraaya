@@ -10,11 +10,11 @@ const Experiences: React.FC<ExperiencesProps> = ({ title, cards, cta }) => {
     <SectionWithContainer>
       <div className="md:space-y-14 space-y-8">
         <SectionHeading title={title} fontPrimary textCenter />
-        <div className="lg:grid hidden grid-cols-3 gap-8">
+        {/* <div className="lg:grid hidden grid-cols-3 gap-8">
           {cards.map((card, index) => (
             <ExperiencesCard key={index} {...card} />
           ))}
-        </div>
+        </div> */}
         <ExperiencesSliders cards={cards} />
         <LinkButton
           href={cta.href}

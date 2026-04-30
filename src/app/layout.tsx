@@ -135,8 +135,8 @@ export default function RootLayout({
         {/* <!-- End Google Tag Manager (noscript) --> */}
         {children}
         <Footer />
-        <Whatsapp whatsAppNumber={contact.phone[0]} />
-        <Call callNumber={contact.phone[0]} />
+        <Whatsapp whatsAppNumber={contact.phone[1]} />
+        <Call callNumber={contact.phone[1]} />
         {/* <!-- Eazbot Script (Next.js) --> */}
         <Script id="chatbot-config" strategy="afterInteractive">
           {`

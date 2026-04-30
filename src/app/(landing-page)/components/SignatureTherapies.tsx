@@ -58,10 +58,16 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
                     className="object-contain"
                   />
                 </div>
+
                 <p className="md:text-4xl text-[1.4rem] font-semibold font-primary text-secondary">
                   {therapie.name}
                 </p>
-                <p className="text-light">{therapie.description}</p>
+                <div className="space-y-2">
+                  <p className="text-xl font-primary">
+                    <b>{therapie.subTitle}</b>
+                  </p>
+                  <p className="text-light">{therapie.description}</p>
+                </div>
                 <div className="flex items-center justify-between w-full">
                   <LinkButton
                     href={cta.href}

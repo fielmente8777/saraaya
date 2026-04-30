@@ -9,15 +9,14 @@ import { landingPageData } from "./components/landingPageData";
 import Rooms from "./components/Rooms";
 import SignatureTherapies from "./components/SignatureTherapies";
 
-
-
 export default function LandingPage() {
   return (
     <main className="bg-background">
       <Banner {...landingPageData.bannerData} />
       <LandingAbout {...landingPageData.about} />
       <SectionWithContainer
-        sectionClassName="border-b border-Primary"
+        defaultPadding={false}
+        sectionClassName="border-b border-Primary lg:pb-16 pb-10"
         containerClassName="border border-primary md:rounded-3xl p-0!"
       >
         <div className="md:rounded-3xl md:py-3 py-6 bg-primary px-0">

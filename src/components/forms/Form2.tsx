@@ -19,7 +19,6 @@ const Form2 = ({ gridView }: Props) => {
     formData,
     handleChange,
     setFieldValue,
-    submitSuccess,
   } = useBookingForm({
     includeCheckIn: true,
     includeCheckOut: true,

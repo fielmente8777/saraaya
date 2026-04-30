@@ -3,49 +3,50 @@ import { FillLocationIcon } from "@/utils/icons";
 
 export const landingPageData = {
   bannerData: {
-    images: [
-      "/bnr-1.png",
-      "/bnr-2.png",
-      "/bnr-3.png",
-      "/bnr-4.png",
-    ],
+    images: ["/bnr-1.png", "/bnr-2.png", "/bnr-3.png", "/bnr-4.png"],
   },
   about: {
     title:
-      "A Glamping Retreat <br/><span class='text-secondary italic'>in the Dharamshala, <i>Himalayas</i></span>",
-    description:
-      "Saraaya is a luxury glamping retreat located in the forests above Dharamshala in Himachal Pradesh- Built beside a pristine glacier stream flowing from sacred alpine lakes, Saraaya brings together the untamed beauty of the Himalayas and every comfort of a fine stay, four glamp rooms, one extraordinary wilderness.",
+      "A Glamping Retreat <br/><span class='text-secondary italic'>in the  <i>Himalayas</i></span>",
+    description: [
+      "<b>Saraaya</b> is more than a retreat—it is a sanctuary for the soul. Perched beside a crystalline glacier stream born from sacred alpine peaks, we have harmonized the untamed spirit of the Himalayas with the sophisticated comforts of a premier estate. With only four exclusive glamp suites, your stay is a private communion with the wilderness.",
+      "Escape the Noise. Rediscover Your Center.",
+      "Leave the city lights behind for a canopy of a billion stars. ",
+    ],
     location: {
-      label: "Dharamshala, Himachal Pradesh",
+      label: "Nauhali near Dharamshala, Himachal Pradesh",
       icon: <FillLocationIcon />,
       href: contact.addressLink,
     },
   },
 
   signatureTherapiesData: {
-    title: "Sanctuary by Sacred <i>Himalayan Waters!</i>",
+    title: "Sanctuary by Sacred <i>Himalayas!</i>",
     cta: { label: "Book Now", href: contact.WhatsappCta },
     therapies: [
       {
-        src: "/Sacred.png",
+        src: "/Saraya-309.png",
         icon: "/Sacred-icon.png",
         name: "Sacred",
+        subTitle: "An Ancestral Connection",
         description:
-          "Connected to the spiritual heritage of Lam Dal and Kareri Lake sacred waters tied to Lord Shiva, visited by pilgrims and shepherd communities for centuries.",
+          "Steeped in the spiritual legacy of the Lam Dal and Kareri waters, Saraaya sits on land echoing with the footsteps of pilgrims and mountain legends. Here, the air carries a different weight—a quiet, hallowed energy that invites reflection and deep inner peace.",
       },
       {
-        src: "/Wild.png",
-        icon: "/Wild-icon.png",
-        name: "Wild",
-        description:
-          "Surrounded by forests of deodar cedar, rhododendron, pine and ban oak. Ancient, unmanaged, alive in every season, one of the most beautiful natural settings in the Kangra valley.",
-      },
-      {
-        src: "/Restorative.png",
+        src: "/Saraya-319.png",
         icon: "/Restorative-icon.png",
         name: "Restorative",
+        subTitle: "The Art of the Reset",
         description:
-          "A retreat designed for silence, nature and reconnection. Where slowing down is not a luxury but the entire point. Where the Himalayas do the healing.",
+          "In a world that never stops, Saraaya is the pause button. Designed for profound silence and reconnection, we believe that slowing down isn't just a luxury—it is the entire point. Here, the Himalayan breeze does the healing, and the rhythm of the forest dictates your day.",
+      },
+      {
+        src: "/Saraya-159.png",
+        icon: "/Wild-icon.png",
+        name: "Wild",
+        subTitle: "Untamed Elegance",
+        description:
+          "Surrounded by a majestic canopy of Deodar Cedar, Rhododendron, and ancient Oak, Saraaya is a living part of the Kangra Valley. Witness the forest breathe through the seasons from the comfort of your private deck—one of the most breathtakingly raw, yet elegantly managed, natural settings in the world.",
       },
     ],
   },
@@ -102,6 +103,26 @@ export const landingPageData = {
         image: "/exp-3.png",
         alt: "Glacier Stream Picnic",
       },
+      {
+        image: "/exp-4.png",
+        alt: "Cultural night",
+      },
+      {
+        image: "/exp-7.png",
+        alt: "Movie under the stars",
+      },
+      {
+        image: "/exp-8.png",
+        alt: "Bonfire",
+      },
+      {
+        image: "/exp-5.png",
+        alt: "Private dining by the river",
+      },
+      {
+        image: "/exp-6.png",
+        alt: "Village tour",
+      },
     ],
     cta: {
       label: "Book Now",
@@ -110,7 +131,13 @@ export const landingPageData = {
   },
   testimonialData: {
     title: "Guest <i>Experiences</i>",
-    images: ["/guest-1.png", "/guest-2.png", "/guest-3.png", "/guest-4.png", "/guest-5.png"],
+    images: [
+      "/guest-1.png",
+      "/guest-2.png",
+      "/guest-3.png",
+      "/guest-4.png",
+      "/guest-5.png",
+    ],
     testimonials: [
       {
         text: "We didn’t just “reach” Saraaya you actually walk the last stretch, and that changes the whole experience. By the time you arrive, it already feels like you’ve left everything behind. No traffic, no noise just silence and space. The tents are beautifully done, but what really stays with you is the feeling of being completely cut off (in a good way). Mornings here feel unreal. Definitely not for people looking for an easy, hotel-like stay. But if you want something different, this place delivers.",

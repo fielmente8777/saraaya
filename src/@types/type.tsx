@@ -19,6 +19,7 @@ export interface SignatureTherapiesDataType {
   };
   therapies: {
     name: string;
+    subTitle: string;
     description: string;
     src: string;
     icon: string;

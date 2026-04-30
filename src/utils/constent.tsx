@@ -3,16 +3,16 @@ I’m interested to know more about Saraaya.`);
 export const contact = {
   email: "info@saraayaglamps.com",
   mapUrl:"",
-  phone: ["+91 78766 24372"],
+  phone: ["+91 78766 24372","+91 89883 34372"],
   address:
     "Village Nauhali, Dharamshala 176217",
-  addressLink: "https://maps.app.goo.gl/UNE7MTPTh84gEPhW7",
+  addressLink: "",
   socialMedia: {
     facebook: "https://www.facebook.com/share/1LsNztG2je/?mibextid=wwXIfr",
     instagram: "https://www.instagram.com/saraaya.dharamshala?igsh=eWN4c24wcGI0bXdy",
     linkedin: "",
   },
-  WhatsappCta: `https://wa.me/+918869817528?text=${enCodeText}`,
+  WhatsappCta: `https://wa.me/+918988334372?text=${enCodeText}`,
   formDomain: "saraayaglamps",
   // formDomain: "testmulti", //for testing
   formHid:"",

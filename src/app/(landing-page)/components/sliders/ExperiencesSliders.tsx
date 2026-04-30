@@ -9,7 +9,7 @@ const ExperiencesSliders: React.FC<{ cards: ExperiencesProps["cards"] }> = ({
   cards,
 }) => {
   return (
-    <div className="lg:hidden block w-full">
+    <div className="w-full">
       <SwiperCarousel
         data={cards}
         slidesPerView={1}
@@ -24,6 +24,12 @@ const ExperiencesSliders: React.FC<{ cards: ExperiencesProps["cards"] }> = ({
         breakpoints={{
           768: {
             slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 3,
           },
         }}
         renderSlide={(card) => <ExperiencesCard {...card} />}
