@@ -4,6 +4,7 @@ import Image from "next/image";
 import { footerData } from "./footerdata";
 import LazyLoadedMap from "../map/LazyLoadedMap";
 import LinkButton from "../buttons/LinkButton";
+import { contact } from "@/utils/constent";
 
 const LandingFooter = () => {
   return (
@@ -115,7 +116,7 @@ const LandingFooter = () => {
           ))}
 
           <div className="w-full md:rounded-3xl rounded-xl overflow-hidden max-md:aspect-4/3">
-            <LazyLoadedMap src="" />
+            <LazyLoadedMap src={contact.mapUrl} />
           </div>
         </div>
       </Container>
