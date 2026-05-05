@@ -59,11 +59,11 @@ const SignatureTherapies: React.FC<SignatureTherapiesDataType> = ({
                   />
                 </div>
 
-                <p className="md:text-4xl text-[1.4rem] font-semibold font-primary text-secondary">
+                <p className="md:text-3xl text-[1.375rem] font-semibold font-primary text-secondary">
                   {therapie.name}
                 </p>
                 <div className="space-y-2">
-                  <p className="text-xl font-primary">
+                  <p className="text-xl">
                     <b>{therapie.subTitle}</b>
                   </p>
                   <p className="text-light">{therapie.description}</p>

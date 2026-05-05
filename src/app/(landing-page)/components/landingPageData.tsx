@@ -21,7 +21,7 @@ export const landingPageData = {
   },
 
   signatureTherapiesData: {
-    title: "Sanctuary by Sacred <i>Himalayas!</i>",
+    title: "Hidden within the Folds of the <i>Mountains!</i>",
     cta: { label: "Book Now", href: contact.WhatsappCta },
     therapies: [
       {
