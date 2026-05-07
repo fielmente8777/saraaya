@@ -34,11 +34,11 @@ const Testimonial: React.FC<TestimonialType> = ({
               className="w-fit text-secondary uppercase rounded-full flex justify-center"
             />
             <div className="flex items-center gap-4">
-              <button className="therapies-prev text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95">
+              <button className="testimonials-prev text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95">
                 <BtnPrevIcon />
                 <span className="sr-only">Previous</span>
               </button>
-              <button className="therapies-next text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95">
+              <button className="testimonials-next text-primary border px-5 py-2 rounded-full hover:bg-white active:scale-95">
                 <BtnNext />
                 <span className="sr-only">Next</span>
               </button>
