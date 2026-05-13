@@ -49,7 +49,7 @@ export const footerData: FooterData = {
   logo: "/logo.png",
   cta: {
     label: "Book Now",
-    href: contact.WhatsappCta,
+    href: contact.callCta,
   },
   lists: [
     {

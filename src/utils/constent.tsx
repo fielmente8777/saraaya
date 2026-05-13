@@ -12,6 +12,7 @@ export const contact = {
     instagram: "https://www.instagram.com/saraaya.dharamshala?igsh=eWN4c24wcGI0bXdy",
     linkedin: "",
   },
+  callCta: `tel:+918988334372`,
   WhatsappCta: `https://wa.me/+918988334372?text=${enCodeText}`,
   formDomain: "saraayaglamps",
   // formDomain: "testmulti", //for testing

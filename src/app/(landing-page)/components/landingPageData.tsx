@@ -22,7 +22,7 @@ export const landingPageData = {
 
   signatureTherapiesData: {
     title: "Hidden within the Folds of the <i>Mountains!</i>",
-    cta: { label: "Book Now", href: contact.WhatsappCta },
+    cta: { label: "Book Now", href: contact.callCta },
     therapies: [
       {
         src: "/Saraya-309.png",
@@ -78,7 +78,7 @@ export const landingPageData = {
     ],
     cta: {
       label: "Book Now",
-      href: contact.WhatsappCta,
+      href: contact.callCta,
     },
   },
 
@@ -126,7 +126,7 @@ export const landingPageData = {
     ],
     cta: {
       label: "Book Now",
-      href: contact.WhatsappCta,
+      href: contact.callCta,
     },
   },
   testimonialData: {
@@ -159,7 +159,7 @@ export const landingPageData = {
 
     cta: {
       label: "Book Now",
-      href: contact.WhatsappCta,
+      href: contact.callCta,
     },
   },
 };
