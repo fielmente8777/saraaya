@@ -9,7 +9,10 @@ const Footer = () => {
       return null;
     case "/":
       return <LandingFooter />;
-    
+    case "/gallery/":
+        return null ;
+      case "/contact-us/":
+        return null ;    
     default:
       return <LandingFooter />;
   }
