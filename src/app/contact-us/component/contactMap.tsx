@@ -7,7 +7,7 @@ type Props = {
 export default function ContactMap({ mapUrl }: Props) {
   return (
     <div className="w-full md:aspect-4/2.25 aspect-[1.61] overflow-hidden">
-      {/* <LazyLoadedMap src="#" /> */}
+      <LazyLoadedMap src={mapUrl} />
     </div>
   );
 }

@@ -47,7 +47,7 @@ const Form3 = () => {
     },
   ];
   return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       {formFields.map((field, index) => (
         <>
           {field.type === "textarea" ? (
@@ -55,8 +55,8 @@ const Form3 = () => {
               key={index}
               name={field.name}
               placeholder={field.label}
-              rows={4}
-              className="p-4 border border-[#D7D7D7] rounded-lg w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2 resize-none"
+              rows={3}
+              className="w-full rounded-lg border border-[#D7D7D7] bg-white p-4 placeholder:text-black focus:outline-none"
               value={field.value}
               onChange={field.onChange}
             ></textarea>
@@ -64,7 +64,7 @@ const Form3 = () => {
             <div className="flex w-full" key={index}>
               <div className="relative">
                 <select
-                 className="h-full min-w-[110px] py-4 ps-4 border-y border-x rounded-l-lg cursor-pointer border-[#D7D7D7] appearance-none focus:outline-none"
+                 className="h-full min-w-[110px] rounded-l-lg border border-[#D7D7D7] bg-white py-4 ps-4 text-black appearance-none focus:outline-none"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
@@ -89,7 +89,7 @@ const Form3 = () => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className="p-4 border-y border-r border-[#D7D7D7] rounded-r-lg w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2"
+                className="w-full rounded-r-lg border border-l-0 border-[#D7D7D7] bg-white p-4 text-black placeholder:text-[#7F7F7F] focus:outline-none"
                 value={field.value}
                 onChange={field.onChange}
               />
@@ -100,7 +100,7 @@ const Form3 = () => {
               type={field.type}
               name={field.name}
               placeholder={field.label}
-              className="p-4 border border-[#D7D7D7] rounded-lg w-full placeholder:text-[#7F7F7F] focus:outline-none text-p2"
+              className="w-full rounded-lg border border-[#D7D7D7] bg-white p-4 placeholder:text-black focus:outline-none"
               value={field.value}
               onChange={field.onChange}
             />
@@ -113,7 +113,7 @@ const Form3 = () => {
       ))}
       <button
         type="submit"
-        className="w-full rounded-lg bg-secondary py-5 text-white"
+        className="w-full rounded-lg bg-secondary py-4 text-white"
       >
         {isSubmitting ? (
           "Submitting..."
