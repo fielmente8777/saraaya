@@ -7,6 +7,8 @@ import Call from "@/components/ContactButton/Call";
 import { contact } from "@/utils/constent";
 import Whatsapp from "@/components/ContactButton/WhatsApp";
 import Script from "next/script";
+import NavBar from "@/components/navbar/NavBar";
+import { WebProvider } from "@/context-api/WebContext";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -133,10 +135,15 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
-        {children}
-        <Footer />
-        <Whatsapp whatsAppNumber={contact.phone[1]} />
-        <Call callNumber={contact.phone[1]} />
+
+        <WebProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <Whatsapp whatsAppNumber={contact.phone[1]} />
+          <Call callNumber={contact.phone[1]} />
+        </WebProvider>
+
         {/* <!-- Eazbot Script (Next.js) --> */}
         <Script id="chatbot-config" strategy="afterInteractive">
           {`

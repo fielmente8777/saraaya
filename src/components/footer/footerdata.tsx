@@ -7,6 +7,8 @@ import {
   Instagram,
   LinkedIn,
 } from "@/utils/icons";
+import { navData } from "../navbar/navData";
+import { CallIcon } from "@/utils/formIcons";
 
 interface FooterData {
   logo: string;
@@ -29,7 +31,6 @@ interface FooterData {
 
 interface WebsiteFooterData {
   logo: string;
-  description: string[];
 
   lists: {
     title?: string;
@@ -82,49 +83,32 @@ export const footerData: FooterData = {
 
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/logo.png",
-  description: [
-    "Sign up here to get the latest news, updates and special offers delivered to your inbox.",
-    "Plus, you’ll be the first to know about our discounts!",
-  ],
+
   lists: [
     {
       title: "Explore",
-      links: [
-        { label: "Home", href: "/" },
-        { label: "Our Therapies", href: "/therapies" },
-        { label: "Programs", href: "/experiences-at-naad" },
-        { label: "Dining", href: "/dining-cuisine" },
-        { label: "Blogs", href: "/blog" },
-      ],
+      links: navData.links,
     },
+
     {
-      title: "Policies",
-      links: [
-        { label: "About us", href: "/about-us" },
-        { label: "Media Coverage", href: "/media-coverage" },
-        { label: "Gallery", href: "/gallery" },
-        { label: "Terms & conditions", href: "/centre-policy" },
-        { label: "contact us", href: "/contact-us" },
-      ],
-    },
-    {
-      title: "Get help",
-      subtitle: "Contact Us",
+      title: "Reservations",
       links: [
         {
-          label: "Facebook",
-          href: contact.socialMedia.facebook,
-          icon: <Facebook />,
+          label: contact.phone[0],
+          href: "tel:" + contact.phone[0],
+          label2: contact.phone[1],
+          href2: "tel:" + contact.phone[1],
+          icon: <CallIcon />,
         },
         {
-          label: "linkedIn",
-          href: contact.socialMedia.linkedin,
-          icon: <LinkedIn />,
+          label: contact.address,
+          href: contact.addressLink,
+          icon: <FillLocationIcon />,
         },
         {
-          label: "instagram",
-          href: contact.socialMedia.instagram,
-          icon: <Instagram />,
+          label: contact.email,
+          href: "mailto:" + contact.email,
+          icon: <FillMailIcon />,
         },
       ],
     },
