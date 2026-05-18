@@ -1,14 +1,20 @@
-import { OutlineLOcationIcon, SleepsIcon } from "@/utils/webSiteIcon";
+import {
+  BreakFastIcon,
+  OutlineLOcationIcon,
+  SleepsIcon,
+  SQFTIcon,
+} from "@/utils/webSiteIcon";
 
 export const accommodationPageData = {
   hero: {
+    image: "/rooms/hero.png",
     subtitle: "Experience Luxury ",
     title: "Himalayan Glamping Escapes!",
   },
   about: {
-    logo: "",
+    logo: "/home/Vector-1.png",
     title:
-      "Saraaya Glamps is a Himalayan Sanctuary for Stillness, Slow Living & Quiet Rejuvenation!",
+      "“Saraaya Glamps” is a Himalayan Sanctuary for Stillness, Slow Living & Quiet Rejuvenation!",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
   },
@@ -23,12 +29,13 @@ export const accommodationPageData = {
     {
       id: "01",
       title: "The Cedar Suite",
+      image: "/rooms/Mountain-1.png",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SleepsIcon /> },
-        { title: "BREAKFAST", icon: <SleepsIcon /> },
+        { title: "425 SQ FT", icon: <SQFTIcon /> },
+        { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
@@ -38,13 +45,14 @@ export const accommodationPageData = {
     },
     {
       id: "02",
+      image: "/rooms/Mountain-2.png",
       title: "The River Tent",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SleepsIcon /> },
-        { title: "BREAKFAST", icon: <SleepsIcon /> },
+        { title: "425 SQ FT", icon: <SQFTIcon /> },
+        { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
@@ -54,13 +62,14 @@ export const accommodationPageData = {
     },
     {
       id: "03",
+      image: "/rooms/Premium-1.png",
       title: "The Cedar Suite",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SleepsIcon /> },
-        { title: "BREAKFAST", icon: <SleepsIcon /> },
+        { title: "425 SQ FT", icon: <SQFTIcon /> },
+        { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
@@ -70,13 +79,14 @@ export const accommodationPageData = {
     },
     {
       id: "04",
+      image: "/rooms/Premium-2.png",
       title: "The Lantern Suite",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SleepsIcon /> },
-        { title: "BREAKFAST", icon: <SleepsIcon /> },
+        { title: "425 SQ FT", icon: <SQFTIcon /> },
+        { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
@@ -87,10 +97,14 @@ export const accommodationPageData = {
   ],
 
   feelingSection: {
+    image: "/home/feeling-img.png",
     title: "The Saraaya Feeling",
     heading:
       "Mornings Wrapped in Mist. Evenings Lit by Fire. Nights Filled with Stars.",
-    buttonText: "PLAN YOUR EXCAPE",
+    cta: {
+      label: "PLAN YOUR EXCAPE",
+      href: "/contact-us",
+    },
   },
 
   reviewsSection: {

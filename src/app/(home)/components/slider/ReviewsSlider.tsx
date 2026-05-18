@@ -8,7 +8,7 @@ interface TestimonialsSliderProps {
 }
 const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
   return (
-    <div>
+    <div className="w-full max-w-7xl mx-auto">
       <SwiperCarousel
         data={cards}
         slidesPerView={1}

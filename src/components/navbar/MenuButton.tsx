@@ -2,7 +2,7 @@
 
 import { useWebContext } from "@/context-api/WebContext";
 
-export default function MenuButton() {
+export default function MenuButton({ color="white" }: { color: string }) {
   const { isOpenNavBar, setIsOpenNavBar } = useWebContext();
 
   return (
@@ -13,19 +13,19 @@ export default function MenuButton() {
     >
       {/* TOP */}
       <span
-        className={`absolute h-0.5 w-8 bg-white transition-all duration-500 ease-in-out
+        className={`absolute h-0.5 w-8 bg-${color} transition-all duration-500 ease-in-out
         ${isOpenNavBar ? "rotate-45" : "-translate-y-2"}`}
       />
 
       {/* MIDDLE */}
       <span
-        className={`absolute h-0.5 w-8 bg-white transition-all duration-500 ease-in-out
+        className={`absolute h-0.5 w-8 bg-${color} transition-all duration-500 ease-in-out
         ${isOpenNavBar ? "opacity-0" : "opacity-100"}`}
       />
 
       {/* BOTTOM */}
       <span
-        className={`absolute h-0.5 w-8 bg-white transition-all duration-500 ease-in-out
+        className={`absolute h-0.5 w-8 bg-${color} transition-all duration-500 ease-in-out
         ${isOpenNavBar ? "-rotate-45" : "translate-y-2"}`}
       />
     </button>

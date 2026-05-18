@@ -22,12 +22,17 @@ const About: React.FC<AboutProps> = ({
   return (
     <SectionWithContainer sectionClassName="sticky-section bg-[#FFF9E1]">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
-        <div className="gap-4 flex flex-col justify-center">
+        <div className="gap-6 flex flex-col justify-center">
           <p className="uppercase font-primary text-secondary flex items-center gap-2">
             <span className="w-10 bg-secondary h-px" />
             {title}
           </p>
           <SectionHeading title={heading} />
+          <div className="relative aspect-square w-full lg:hidden">
+            <div className="absolute z-10 aspect-square w-26 border-t border-l border-secondary -top-2 -left-2" />
+            <div className="absolute z-10 aspect-square w-26 border-r border-b border-secondary -bottom-2 -right-2" />
+            <Image src={image} alt="Image" fill className="object-cover" />
+          </div>
           <div className="w-[153px] aspect-4/2 relative ">
             <Image src={logo} alt="Image" fill className="object-cover" />
           </div>
@@ -43,7 +48,7 @@ const About: React.FC<AboutProps> = ({
             {hostedText}
           </p>
         </div>
-        <div className="relative aspect-square w-full">
+        <div className="relative aspect-square w-full lg:block hidden">
           <div className="absolute z-10 aspect-square w-26 border-t border-l border-secondary -top-2 -left-2" />
           <div className="absolute z-10 aspect-square w-26 border-r border-b border-secondary -bottom-2 -right-2" />
           <Image src={image} alt="Image" fill className="object-cover" />

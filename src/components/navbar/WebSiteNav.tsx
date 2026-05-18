@@ -11,7 +11,7 @@ import NavMenu from "./NavMenu";
 const WebSiteNav = () => {
   const pathname = usePathname();
 
-  const paths = ["/", "/rooms"];
+  const paths = ["/", "/rooms/"];
   const isTransparent = paths.includes(pathname);
 
   const [visible, setVisible] = useState(true);
@@ -51,8 +51,9 @@ const WebSiteNav = () => {
   }, []);
 
   return (
-    <header
-      className={`
+    <>
+      <header
+        className={`
         fixed top-0 left-0 z-50 w-full
         transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]
         will-change-transform
@@ -60,41 +61,48 @@ const WebSiteNav = () => {
         ${
           isTransparent
             ? scrolled
-              ? "bg-black/30 backdrop-blur-xl"
+              ? "bg-primary backdrop-blur-xl"
               : "bg-transparent"
-            : "bg-white"
+            : "bg-background"
         }
       `}
-    >
-      {/* Top Navbar */}
-      <nav className="max_width flex items-center justify-between py-4">
-        <MenuButton />
+      >
+        {/* Top Navbar */}
+        <nav className="max_width flex items-center justify-between py-4">
+          <MenuButton color={isTransparent ? "white" : "primary"} />
 
-        <div className="relative aspect-[4/2] w-full max-w-38">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            fill
-            priority
-            className="object-contain"
-          />
-        </div>
+          <div className="relative aspect-[4/.89] w-full max-w-40 lg:ml-20">
+            <Image
+              src={isTransparent ? "/logo-white.png" : "/logo-green.png"}
+              alt="Logo"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
 
-        <LinkButton
-          href="/"
-          label="Book Now"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            w-fit rounded-full border-none
-            bg-white text-secondary
+          <LinkButton
+            href="/"
+            label="reserve"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`
+            w-fit rounded-lg
+            max-md:hidden
             uppercase
-          "
-        />
-      </nav>
+            ${
+              isTransparent
+                ? "bg-transparent text-white"
+                : " text-primary border border-primary"
+            }
+            `}
+          />
+        </nav>
 
-      <NavMenu />
-    </header>
+        <NavMenu />
+      </header>
+      {!isTransparent && <div className="h-[60px] w-full" />}
+    </>
   );
 };
 

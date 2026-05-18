@@ -3,15 +3,9 @@
 import Link from "next/link";
 import { useWebContext } from "@/context-api/WebContext";
 import { useEffect } from "react";
+import { navData } from "./navData";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Rooms & Suites", href: "/rooms" },
-  { label: "Dining", href: "/dining" },
-  { label: "Experiences", href: "/experiences" },
-  { label: "Contact", href: "/contact" },
-];
+
 
 const NavMenu = () => {
   const { isOpenNavBar, setIsOpenNavBar } = useWebContext();
@@ -44,13 +38,13 @@ const NavMenu = () => {
       {/* Menu Content */}
       <nav className="max_width py-12 md:py-16">
         <ul className="flex flex-col items-center gap-6 md:gap-8">
-          {navLinks.map((link) => (
+          {navData.links.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
                 onClick={() => setIsOpenNavBar(false)}
                 className="
-                  text-2xl md:text-4xl
+                  text-xl md:text-4xl
                   font-primary
                   uppercase tracking-[0.12em]
                   text-white/90

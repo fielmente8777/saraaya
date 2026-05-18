@@ -1,8 +1,13 @@
+import Banner from "./components/Banner";
+import MountainSection from "./components/MountainSection";
+import { storyPageData } from "./components/pageData";
+
 const page = () => {
     return (
-        <div>
-            Enter
-        </div>
+        <main>
+            <Banner {...storyPageData.hero} />
+            <MountainSection {...storyPageData.ancestralSection} />
+        </main>
     );
 }
 

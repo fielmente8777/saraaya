@@ -3,6 +3,7 @@ import {
   CloudIcon,
   GpsIcon,
   OutlineLOcationIcon,
+  SleepsIcon,
   WindIcon,
 } from "@/utils/webSiteIcon";
 
@@ -53,21 +54,32 @@ export const homePageData = {
       {
         id: "01",
         title: "The Cedar Suite",
+        image: "/rooms/Mountain-1.png",
+        amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
+        cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "02",
         title: "The River Tent",
+        image: "/rooms/Mountain-2.png",
+        amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
+        cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "03",
         title: "The Cedar Suite",
+        image: "/rooms/Mountain-3.png",
+        amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
+        cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "04",
         title: "The Lantern Suite",
+        image: "/rooms/Mountain-4.png",
+        amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
+        cta: { label: "know more", href: "/rooms" },
       },
     ],
-    buttonText: "KNOW MORE",
   },
 
   experiencesSection: {
@@ -77,11 +89,43 @@ export const homePageData = {
       "Curated rituals designed by our hosts, none of them on a schedule, all of them on the slow side of time.",
     experiences: [
       {
-        title: "Himalayan Breakfasts",
+        image: "/exp-1.png",
+        title: "Trek to Hidden Himalayan Lakes",
         timing: "Sunrise · In-tent",
       },
       {
+        image: "/exp-8.png",
         title: "Bonfire",
+        timing: "Dusk · Daily",
+      },
+      {
+        image: "/exp-2.png",
+        title: "Stargaze Under Zero Light Pollution",
+        timing: "Sunrise · In-tent",
+      },
+      {
+        image: "/exp-3.png",
+        title: "Glacier Stream Picnic",
+        timing: "Dusk · Daily",
+      },
+      {
+        image: "/exp-4.png",
+        title: "Cultural night",
+        timing: "Sunrise · In-tent",
+      },
+      {
+        image: "/exp-7.png",
+        title: "Movie under the stars",
+        timing: "Dusk · Daily",
+      },
+      {
+        image: "/exp-5.png",
+        title: "Private dining by the river",
+        timing: "Sunrise · In-tent",
+      },
+      {
+        image: "/exp-6.png",
+        title: "Village tour",
         timing: "Dusk · Daily",
       },
     ],

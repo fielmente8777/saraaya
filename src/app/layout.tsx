@@ -9,6 +9,7 @@ import Whatsapp from "@/components/ContactButton/WhatsApp";
 import Script from "next/script";
 import NavBar from "@/components/navbar/NavBar";
 import { WebProvider } from "@/context-api/WebContext";
+import Image from "next/image";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -88,9 +89,10 @@ export default function RootLayout({
             fbq('track', 'PageView');`}
         </script>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
+            alt="fb-pixel"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1297264175884694&ev=PageView&noscript=1"
           />

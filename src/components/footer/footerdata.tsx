@@ -1,14 +1,8 @@
 import { contact } from "@/utils/constent";
-import {
-  Facebook,
-  FillCallIcon,
-  FillLocationIcon,
-  FillMailIcon,
-  Instagram,
-  LinkedIn,
-} from "@/utils/icons";
+
+import { CallIcon, LocationIcon, MailIcon } from "@/utils/webSiteIcon";
 import { navData } from "../navbar/navData";
-import { CallIcon } from "@/utils/formIcons";
+import { FillCallIcon, FillLocationIcon, FillMailIcon } from "@/utils/icons";
 
 interface FooterData {
   logo: string;
@@ -103,12 +97,12 @@ export const websiteFooterData: WebsiteFooterData = {
         {
           label: contact.address,
           href: contact.addressLink,
-          icon: <FillLocationIcon />,
+          icon: <LocationIcon />,
         },
         {
           label: contact.email,
           href: "mailto:" + contact.email,
-          icon: <FillMailIcon />,
+          icon: <MailIcon />,
         },
       ],
     },

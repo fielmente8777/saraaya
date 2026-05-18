@@ -19,8 +19,8 @@ const EscapeSection: React.FC<EscapeSectionProps> = ({
   cta,
 }) => {
   return (
-    <Section defaultPadding={false} className="sticky-section">
-      <div className="relative w-full lg:aspect-16/8 aspect-4/3 ">
+    <Section defaultPadding={false} className="sticky-section lg:h-screen">
+      <div className="relative w-full lg:aspect-16/8 aspect-4/7">
       <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
           src={image}
