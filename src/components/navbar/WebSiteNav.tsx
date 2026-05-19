@@ -101,7 +101,7 @@ const WebSiteNav = () => {
 
         <NavMenu />
       </header>
-      {!isTransparent && <div className="h-[60px] w-full" />}
+      {!isTransparent && <div className="h-[80px] w-full" />}
     </>
   );
 };

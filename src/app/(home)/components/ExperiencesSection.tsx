@@ -21,7 +21,7 @@ const ExperiencesSection: React.FC<Props> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative lg:h-[430dvh] h-[470dvh] bg-primary"
+      className="relative lg:h-[410dvh] h-[470dvh] bg-primary"
     >
       <div className="relative w-full h-full aspect-auto">
         <Image
@@ -50,7 +50,7 @@ const ExperiencesSection: React.FC<Props> = ({
             {experiences.map((item, index) => (
               <div className="flex flex-col gap-2 mt-6 sticky top-0 bg-primary" key={index}>
                 <div
-                  className={`relative aspect-4/3.5 border-8 border-white w-full ${index + (1 % 2) === 0 ? "lg:-mt-8" : ""}`}
+                  className={`relative aspect-4/3.5 border-8 border-white w-full ${(index + 1) % 2 === 0 ? "lg:-mt-8" : ""}`}
                 >
                   <Image
                     src={item.image}

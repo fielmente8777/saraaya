@@ -1,6 +1,7 @@
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import Image from "next/image";
+import MountainSlider from "./slider/MountainSlider";
 
 interface MountainSectionProps {
   heading: string;
@@ -17,12 +18,15 @@ const MountainSection: React.FC<MountainSectionProps> = ({
   cards,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-background">
+    <SectionWithContainer
+      sectionClassName="bg-background"
+      containerClassName="max-md:px-0!"
+    >
       {cards.map((card, index) => (
         <div key={index} className="sticky top-0 bg-background">
           <div className=" h-[75dvh] items-center grid grid-cols-1 lg:grid-cols-[1fr_1.6fr_1fr] gap-8 lg:gap-16 pt-8">
             {/* Left Image */}
-            <div className="relative w-full aspect-[4/4.5] overflow-hidden lg:block hidden">
+            <div className="relative w-full aspect-[4/4.5] -rotate-8 -top-16 overflow-hidden lg:block hidden">
               <Image
                 src={card.images[0]}
                 alt={card.subTitle}
@@ -32,9 +36,9 @@ const MountainSection: React.FC<MountainSectionProps> = ({
             </div>
 
             {/* Center Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               {/* Fixed Heading */}
-              <p className="text-center text-sm text-secondary flex items-center gap-2 justify-center uppercase">
+              <p className="text-center text-sm max-md:px-4 text-secondary flex items-center gap-2 justify-center uppercase">
                 <span className="w-10 bg-secondary h-px inline-block" />
                 {card.subTitle}
                 <span className="w-10 bg-secondary h-px inline-block" />
@@ -42,7 +46,7 @@ const MountainSection: React.FC<MountainSectionProps> = ({
               <SectionHeading title={heading} textCenter />
 
               {/* Current Card Content */}
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center max-md:px-4">
                 <div className="relative mx-auto w-full max-w-[100px] aspect-[4/2]">
                   <Image
                     src={card.icon}
@@ -54,10 +58,11 @@ const MountainSection: React.FC<MountainSectionProps> = ({
 
                 <p className="mt-4 text-center">{card.description}</p>
               </div>
+              <MountainSlider images={card.images} />
             </div>
 
             {/* Right Image */}
-            <div className="relative w-full aspect-[4/4.5] overflow-hidden lg:block hidden">
+            <div className="relative w-full aspect-[4/4.5] rotate-10 overflow-hidden lg:block hidden">
               <Image
                 src={card.images[1]}
                 alt={card.subTitle}

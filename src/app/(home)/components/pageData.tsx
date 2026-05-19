@@ -17,8 +17,8 @@ export const homePageData = {
 
   banner: {
     video: {
-      src: "/video.mp4",
-      poster: "/home/bnr.png",
+      src: "/home/Copy-of-Drone-clips.mp4",
+      poster: "/home/Copy-of-Drone-clips.png",
     },
   },
   about: {
