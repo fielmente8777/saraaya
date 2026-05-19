@@ -2,6 +2,7 @@ import { JSX } from "react";
 import { Container, Section } from "./sectionComponants";
 import Image from "next/image";
 import SlidingTitle from "./sliders/SlidingTitle";
+import SlidingTitle2 from "./sliders/SlidingTitle2";
 
 interface TitleSectionProps {
   titles: {
@@ -35,7 +36,7 @@ const TitleSection = ({ titles, colorChange }: TitleSectionProps) => {
         </Container>
       </Section>
       <div className="lg:hidden">
-        <SlidingTitle items={titles} colorChange={colorChange} />
+        <SlidingTitle2 items={titles} colorChange={colorChange} />
       </div>
     </>
   );
