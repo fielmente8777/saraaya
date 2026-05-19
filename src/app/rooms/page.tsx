@@ -10,8 +10,8 @@ import TitleSection from "@/components/TitleSection";
 const page = () => {
   return (
     <main>
-      <TitleSection titles={homePageData.titles} />
       <ImgBanner {...accommodationPageData.hero} />
+      <TitleSection titles={homePageData.titles} />
       <RoomAbout {...accommodationPageData.about} />
       <RoomCardSection cards={accommodationPageData.accommodations} />
       <EscapeSection {...accommodationPageData.feelingSection} />
