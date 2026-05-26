@@ -1,6 +1,6 @@
 export const galleryPageData = {
   bannerData: {
-    title: "Explore our Himalayan Resort",
+    title: 'Explore our <span class = "italic text-secondary">Himalayan</span> Resort',
     description: ["A glimpse into luxury and experiences."],
     images: ["/images/gallery/banner.jpg"],
   },

@@ -6,8 +6,11 @@ import { JSX, useState } from "react";
 
 interface Props {
   title: string;
-  heading: string;
-  description: string;
+  heading: {
+    normal: string;
+    highlight: string;
+  };
+  description?: string;
   accommodations: {
     id: string;
     title: string;
@@ -40,7 +43,8 @@ const GlampsSection: React.FC<Props> = ({
             {title}
           </p>
           <h2 className="text-2xl md:text-[3.25rem] font-medium font-primary">
-            {heading}
+            {heading.normal}{" "}
+            <span className="italic text-secondary">{heading.highlight}</span>
           </h2>
           <div className="lg:flex hidden flex-col mt-6 gap-2 divide-y divide-[#CACACA] border-y border-[#CACACA]">
             {accommodations.map((acc) => (
@@ -85,7 +89,10 @@ const GlampsSection: React.FC<Props> = ({
 
           <div className="lg:hidden space-y-10">
             {accommodations.map((acc) => (
-              <div className="flex flex-col gap-4 sticky top-0  bg-background" key={acc.id}>
+              <div
+                className="flex flex-col gap-4 sticky top-0  bg-background"
+                key={acc.id}
+              >
                 <p className="text-xl font-semibold text-primary flex items-center gap-4">
                   <span className="text-sm text-secondary">{acc.id}</span>
                   {acc.title}

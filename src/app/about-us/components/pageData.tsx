@@ -2,31 +2,31 @@ export const storyPageData = {
   hero: {
     title: "ABOUT US",
     image: "/about/bnr.png",
-    heading: "The Story Behind Saraaya Himalayan Escape",
+    heading: 'The Story Behind Saraaya <span class="italic text-secondary"> Himalayan </span> Escape',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "Saraaya is an intimate luxury glampsite nestled deep within the Himalayan wilderness. Hidden away from roads and noise, the retreat offers just four exclusive luxury tents, ensuring privacy, stillness, and a deeply personal connection with nature. Perched beside a crystal-clear mountain stream and surrounded by forests untouched by time, Saraaya blends the raw beauty of the Himalayas with refined comfort and thoughtful hospitality. There’s no rigid itinerary here. Days unfold gently, through open skies, riverside evenings, forest walks, bonfires, and moments that feel entirely your own.",
   },
 
   ancestralSection: {
-    heading: "Hidden within the Folds of the Mountains!",
+    heading: 'Hidden within the Folds of the <span class ="italic text-secondary">Mountains!</span>',
 
     cards: [
       {
-        images: ["/about/1.png", "/about/2.png"],
+        images: ["/about/1.jpg", "/about/2.jpg"],
         icon: "/about/Vector.png",
         subTitle: "An Ancestral Connection",
         description:
           "Steeped in the spiritual legacy of the Lam Dal and Kareri waters, Saraaya sits on land echoing with the footsteps of pilgrims and mountain legends. Here, the air carries a different weight, a quiet, hallowed energy that invites reflection and deep inner peace.",
       },
       {
-        images: ["/about/1.png", "/about/2.png"],
+        images: ["/about/3.jpg", "/about/4.jpg"],
         icon: "/about/Vector-1.png",
         subTitle: "The Art of the Reset",
         description:
           "In a world that never stops, Saraaya is the pause button. Designed for profound silence and reconnection, we believe that slowing down isn't just a luxury, it is the entire point. Here, the Himalayan breeze does the healing, and the rhythm of the forest dictates your day.",
       },
       {
-        images: ["/about/1.png", "/about/2.png"],
+        images: ["/about/5.jpg", "/about/6.jpg"],
         icon: "/about/Vector-2.png",
         subTitle: "Untamed Elegance",
         description:

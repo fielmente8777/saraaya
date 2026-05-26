@@ -36,8 +36,8 @@ const ExperiencesSection: React.FC<Props> = ({
         >
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 relative">
             <div className="">
-              <p className="flex items-center gap-2 text-white uppercase">
-                <span className="w-10 bg-white h-px" />
+              <p className="flex items-center gap-2 text-background uppercase">
+                <span className="w-10 bg-background h-px" />
                 {title}
               </p>
               <SectionHeading title={heading} textCenter titleColor="white" />

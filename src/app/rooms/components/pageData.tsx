@@ -1,8 +1,13 @@
 import {
+  AmenintiesIcon,
   BreakFastIcon,
+  DeckIcon,
+  FanIcon,
   OutlineLOcationIcon,
+  RoomTentIcon,
   SleepsIcon,
   SQFTIcon,
+  TapeIcon,
 } from "@/utils/webSiteIcon";
 
 export const accommodationPageData = {
@@ -12,11 +17,16 @@ export const accommodationPageData = {
     title: "Himalayan Glamping Escapes!",
   },
   about: {
+    subtitle: "SUGGESTED STAY",
     logo: "/home/Vector-1.png",
-    title:
-      "“Saraaya Glamps” is a Himalayan Sanctuary for Stillness, Slow Living & Quiet Rejuvenation!",
+    title: {
+      highlight1: "Two",
+      normal1: " Nights.",
+      highlight2: "Three",
+      normal2: " Mornings.",
+    },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "A private forest retreat in Village Nauhali, near Dharamshala, surrounded by untouched forests, glacier-fed streams, and panoramic views of the Dhauladhar range. Saraaya is designed for travelers seeking silence, slowness, and complete immersion in nature.",
   },
   titles: [
     { title: "Nauhali NEAR Dharamshala", icon: <OutlineLOcationIcon /> },
@@ -28,10 +38,10 @@ export const accommodationPageData = {
   accommodations: [
     {
       id: "01",
-      title: "The Cedar Suite",
-      image: "/rooms/Mountain-1.png",
+      title: "DEVDAR — THE KEEPER",
+      image: "/rooms/1.jpg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        'Named after the sacred deodar cedar - the "wood of the gods" - that stands tall and unwavering through centuries. Devdar holds space the way the oldest trees do: quietly, deeply, and without question.',
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
         { title: "425 SQ FT", icon: <SQFTIcon /> },
@@ -45,12 +55,12 @@ export const accommodationPageData = {
     },
     {
       id: "02",
-      image: "/rooms/Mountain-2.png",
-      title: "The River Tent",
+      image: "/rooms/2.jpg",
+      title: "Rai — The Watcher",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Named after the ban oak, rooted deep and still - the quiet guardian of the Himalayan forest floor. Rai sees everything and says little, offering shade, shelter, and the comfort of steady presence.",
       amenities: [
-        { title: "SLEEPS 2", icon: <SleepsIcon /> },
+        { title: "CUSTOM TOILETRY ESSENTIALS", icon: <SleepsIcon /> },
         { title: "425 SQ FT", icon: <SQFTIcon /> },
         { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
@@ -62,10 +72,10 @@ export const accommodationPageData = {
     },
     {
       id: "03",
-      image: "/rooms/Premium-1.png",
-      title: "The Cedar Suite",
+      image: "/rooms/3.jpg",
+      title: "BURANSH — THE NURTURER",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Named after the rhododendron, whose crimson blooms bring the first warmth to the mountains each spring. Buransh is a gentle reminder that softness is its own kind of strength.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
         { title: "425 SQ FT", icon: <SQFTIcon /> },
@@ -79,16 +89,16 @@ export const accommodationPageData = {
     },
     {
       id: "04",
-      image: "/rooms/Premium-2.png",
-      title: "The Lantern Suite",
+      image: "/rooms/4.jpg",
+      title: "Kail — The Wanderer",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Named after the Himalayan blue pine, whose seeds travel far on the wind before finding ground. Kail is for those who've journeyed long and are ready to arrive - not at a destination, but at a feeling.",
       amenities: [
         { title: "SLEEPS 2", icon: <SleepsIcon /> },
         { title: "425 SQ FT", icon: <SQFTIcon /> },
         { title: "BREAKFAST", icon: <BreakFastIcon /> },
       ],
-      price: "From ₹ 12000/-",
+      
       ctas: [
         { label: "RESERVE", href: "#" },
         { label: "CALL NOW", href: "#" },
@@ -114,4 +124,27 @@ export const accommodationPageData = {
     currentSlide: "01",
     totalSlides: "09",
   },
+
+title: [
+  {
+    icon: <RoomTentIcon />,
+    title: "SPACIOUS LUXURY TENTS",
+  },
+  {
+    icon: <TapeIcon />,
+    title: "ATTACHED MODERN BATHROOMS",
+  },
+  {
+    icon: <AmenintiesIcon />,
+    title: "PREMIUM LINENS & AMENITIES",
+  },
+  {
+    icon: <FanIcon />,
+    title: "HEATERS & FANS ALL SEASONS",
+  },
+  {
+    icon: <DeckIcon />,
+    title: "PRIVATE DECKS",
+  },
+],
 };

@@ -36,7 +36,7 @@ const EscapeSection: React.FC<EscapeSectionProps> = ({
           {title}
           <span className="w-10 bg-white h-px" />
         </p>
-        <SectionHeading title={heading} textCenter titleColor="white" wrapperClassName="max-w-3xl" />
+        <SectionHeading title={heading} textCenter titleColor="white" wrapperClassName="max-w-7xl" />
         <LinkButton
           href={cta.href}
           label={cta.label}

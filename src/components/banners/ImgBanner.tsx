@@ -26,7 +26,7 @@ const ImgBanner: React.FC<ImgBannerProps> = ({ image, subtitle, title }) => {
             {subtitle}
             <span className="w-10 bg-white h-px inline-block" />
           </p>
-          <h1 className="md:text-4xl text-2xl font-primary font-bold">
+          <h1 className="md:text-4xl text-2xl font-primary font-bold italic">
             {title}
           </h1>
         </div>

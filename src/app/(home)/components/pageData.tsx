@@ -25,20 +25,21 @@ export const homePageData = {
     image: "/home/about-img.png",
     logo: "/home/Vector-1.png",
     title: "A LUXURY GLAMPING Retreat",
-    heading: "Where The Mountains Learn To Whisper",
+    heading:
+      'Where The <span class = "italic text-secondary font-primary">Mountains</span> Learn To Whisper',
     description: [
-      `<span class="float-left text-4xl md:text-6xl leading-[0.85] mr-3 font-primary">
-        T
-      </span>ucked into the cedar slopes above Dharamshala, Saraaya is not a hotel, nor a homestay. It is a long pause, a season measured in tea rituals, river sounds, and the slow rolling of mountain mist.`,
+      `<span class="float-left text-4xl md:text-6xl leading-[0.85] mr-3 font-body">
+        S
+      </span>araaya is more than a retreat, it is a sanctuary for the soul. Perched beside a crystalline glacier stream born from sacred alpine peaks,`,
       "Inspired by Tibetan craft and the editorial restraint of Himalayan monasteries, every tent at Saraaya is a quiet room with a window onto the Dhauladhar range.",
     ],
     hostedText: "Hosted by the Saraaya family, since 2019",
   },
 
   escapeSection: {
-    image: "/home/escape-img.png",
-    title: "THE HIMALAYAN ESCAPE",
-    heading: `Saraaya Invites you to Soak in the “Beauty of the Himalayas”`,
+    image: "/home/escape.jpg",
+    title: "A HIDDEN FOREST RETREAT SET AWAY FROM ROADS AND CROWDS",
+    heading: `Accessible through a Short Scenic Forest Walk that Preserves the Silence & Exclusivity of the Property!`,
     cta: {
       label: "PLAN YOUR EXCAPE",
       href: "/about",
@@ -47,34 +48,37 @@ export const homePageData = {
 
   glampsSection: {
     title: "THE GLAMPS",
-    heading: "Four Suites. One forest. Endless ways to Disappear.",
-    description:
-      "Each glamp is hand-built from cedar, canvas and stone, a private kingdom of one suite, one view, one fireplace.",
+    heading: {
+      normal: "Four Suites. One forest. Endless ways to",
+      highlight: "Disappear.",
+    },
+    // description:
+    //   "Each glamp is hand-built from cedar, canvas and stone, a private kingdom of one suite, one view, one fireplace.",
     accommodations: [
       {
         id: "01",
-        title: "The Cedar Suite",
+        title: "Devdar - The Keeper",
         image: "/rooms/Mountain-1.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "02",
-        title: "The River Tent",
+        title: "Rai — The Watcher",
         image: "/rooms/Mountain-2.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "03",
-        title: "The Cedar Suite",
+        title: "Buransh — The Nurturer",
         image: "/rooms/Mountain-3.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "04",
-        title: "The Lantern Suite",
+        title: "Kail — The Wanderer",
         image: "/rooms/Mountain-4.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
@@ -84,13 +88,14 @@ export const homePageData = {
 
   experiencesSection: {
     title: "The Saraaya EXPERIENCES",
-    heading: "Days arranged like Stories!",
+    heading:
+      'Days arranged like <span class="italic text-secondary "> Stories! </span>',
     description:
       "Curated rituals designed by our hosts, none of them on a schedule, all of them on the slow side of time.",
     experiences: [
       {
-        image: "/exp-1.png",
-        title: "Trek to Hidden Himalayan Lakes",
+        image: "/exp1.jpg",
+        title: "Himalayan Breakfasts",
         timing: "Sunrise · In-tent",
       },
       {
@@ -131,16 +136,16 @@ export const homePageData = {
     ],
   },
 
-  feelingSection: {
-    image: "/home/feeling-img.png",
-    title: "The Saraaya Feeling",
-    heading:
-      "Mornings Wrapped in Mist. Evenings Lit by Fire. Nights Filled with Stars.",
-    cta: {
-      label: "PLAN YOUR EXCAPE",
-      href: "/about",
-    },
-  },
+  // feelingSection: {
+  //   image: "/home/feeling-img.png",
+  //   title: "The Saraaya Feeling",
+  //   heading:
+  //     "Mornings Wrapped in Mist. Evenings Lit by Fire. Nights Filled with Stars.",
+  //   cta: {
+  //     label: "PLAN YOUR EXCAPE",
+  //     href: "/about",
+  //   },
+  // },
 
   reviewsSection: {
     title: "GUESTS REVIEWS",

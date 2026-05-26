@@ -17,7 +17,7 @@ const page = () => {
       <GlampsSection {...homePageData.glampsSection} />
       <ExperiencesSection {...homePageData.experiencesSection} />
       <TitleSection titles={homePageData.titles} colorChange={true} />
-      <EscapeSection {...homePageData.feelingSection} />
+      {/* <EscapeSection {...homePageData.feelingSection} /> */}
       <ReviewsSection {...homePageData.reviewsSection} />
       <TitleSection titles={homePageData.titles} colorChange={true} />
     </main>

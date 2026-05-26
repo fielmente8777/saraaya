@@ -12,7 +12,7 @@ interface Props {
     title: string;
     icon: JSX.Element;
   }[];
-  price: string;
+  price?: string;
   ctas: {
     label: string;
     href: string;
@@ -56,7 +56,6 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
                 ))}
               </ul>
               <div className="flex max-lg:flex-col gap-6 items-center justify-between">
-                <p className="text-primary lg:text-lg">{card.price}</p>
                 {card.ctas.map((cta, index) => (
                   <Link
                     key={index}
