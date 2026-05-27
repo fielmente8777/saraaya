@@ -23,7 +23,7 @@ const About: React.FC<AboutProps> = ({
     <SectionWithContainer sectionClassName="sticky-section bg-[#FFF9E1]">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
         <div className="gap-6 flex flex-col justify-center">
-          <p className="uppercase font-primary text-secondary flex items-center gap-2">
+          <p className="uppercase text-secondary flex items-center gap-2">
             <span className="w-10 bg-secondary h-px" />
             {title}
           </p>
@@ -43,7 +43,7 @@ const About: React.FC<AboutProps> = ({
               dangerouslySetInnerHTML={{ __html: item }}
             />
           ))}
-          <p className="uppercase font-primary text-secondary flex items-center gap-2">
+          <p className="uppercase text-secondary flex items-center gap-2">
             <span className="w-10 bg-secondary h-px" />
             {hostedText}
           </p>

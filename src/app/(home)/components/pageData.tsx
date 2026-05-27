@@ -28,10 +28,9 @@ export const homePageData = {
     heading:
       'Where The <span class = "italic text-secondary font-primary">Mountains</span> Learn To Whisper',
     description: [
-      `<span class="float-left text-4xl md:text-6xl leading-[0.85] mr-3 font-body">
+      `<span class="float-left text-4xl md:text-6xl leading-[0.85] mr-3 font-primary">
         S
-      </span>araaya is more than a retreat, it is a sanctuary for the soul. Perched beside a crystalline glacier stream born from sacred alpine peaks,`,
-      "Inspired by Tibetan craft and the editorial restraint of Himalayan monasteries, every tent at Saraaya is a quiet room with a window onto the Dhauladhar range.",
+      </span>araaya is more than a retreat, it is a sanctuary for the soul. Perched beside a crystalline glacier stream born from sacred alpine peaks, we have harmonized the untamed spirit of the Himalayas with the sophisticated comforts of a premier estate. With only four exclusive glamp suites, your stay is a private communion with the wilderness.,Escape the Noise. Rediscover Your Center.,Leave the city lights behind for a canopy of a billion stars.`,
     ],
     hostedText: "Hosted by the Saraaya family, since 2019",
   },

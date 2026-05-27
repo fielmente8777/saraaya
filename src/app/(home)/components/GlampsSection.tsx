@@ -42,7 +42,7 @@ const GlampsSection: React.FC<Props> = ({
             <span className="h-px w-10 bg-secondary" />
             {title}
           </p>
-          <h2 className="text-2xl md:text-[3.25rem] font-medium font-primary">
+          <h2 className="text-2xl md:text-[3.25rem] font-primary">
             {heading.normal}{" "}
             <span className="italic text-secondary">{heading.highlight}</span>
           </h2>
@@ -52,7 +52,7 @@ const GlampsSection: React.FC<Props> = ({
                 type="button"
                 onClick={() => setSelectRoom(acc.title)}
                 key={acc.id}
-                className={`w-full py-3 text-2xl font-semibold flex items-center gap-4 transition-colors ${
+                className={`w-full py-3 text-2xl font-primary flex items-center gap-4 transition-colors ${
                   acc.title === selectRoom ? "text-primary" : "text-[#28361980]"
                 }`}
               >
