@@ -37,12 +37,12 @@ export default function Gallery({ galleryImages }: Props) {
     >
       {/* FILTER BUTTONS */}
       {/* <div className="gallery-tabs mb-6 flex flex-wrap gap-3 justify-center"> */}
-      <div className="mb-12 flex flex-wrap justify-center gap-12 uppercase ">
+      <div className="lg:mb-12 mb-6 flex lg:justify-center lg:gap-12 gap-4 uppercase overflow-x-auto hide-scroll">
         {categories.map((cat, index) => (
           <button
             key={index}
             onClick={() => setSelected(cat)}
-            className={`px-4 border-b transition-all duration-300 font-body text-sm uppercase ${
+            className={`border-b transition-all text-nowrap duration-300 font-body text-sm uppercase ${
               selected === cat
                 ? "border-secondary text-secondary"
                 : "border-transparent text-light"
