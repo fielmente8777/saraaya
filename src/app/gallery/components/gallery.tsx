@@ -31,7 +31,8 @@ export default function Gallery({ galleryImages }: Props) {
 
   return (
     <SectionWithContainer
-      sectionClassName=" bg-background"
+      defaultPadding={false}
+      sectionClassName=" bg-background lg:pb-18 pb-12"
       containerClassName="flex flex-col"
     >
       {/* FILTER BUTTONS */}
