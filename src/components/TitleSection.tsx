@@ -15,7 +15,7 @@ const TitleSection = ({ titles, colorChange }: TitleSectionProps) => {
   return (
     <>
       <Section
-        className={`relative ${colorChange ? "bg-white" : "bg-primary"} w-full h-full aspect-auto hidden lg:block `}
+        className={`relative ${colorChange ? "bg-background" : "bg-primary"} w-full h-full aspect-auto hidden lg:block `}
         defaultPadding={false}
       >
         <Image

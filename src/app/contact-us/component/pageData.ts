@@ -14,8 +14,10 @@ export const contactPageData = {
     links: [
       {
         icon: PhoneIcon,
-        label: "+91 78766 24372, +91 89883 34372",
-        href: "tel:+917876624372",
+        label: contact.phone[0],
+        href: "tel:" + contact.phone[0],
+        label2: contact.phone[1],
+        href2: "tel:" + contact.phone[1],
       },
       {
         icon: EmailIcon,

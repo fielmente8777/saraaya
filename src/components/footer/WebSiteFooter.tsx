@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Container } from "../sectionComponants";
-import { websiteFooterData } from "./footerdata";
+import { socialMedia, websiteFooterData } from "./footerdata";
 import Link from "next/link";
 
 const WebSiteFooter = () => {
   return (
-    <footer className="max_screen_width ">
+    <footer className="max_screen_width bg-background">
       <div className="w-full h-20" />
       <div className="relative w-full aspect-[16/1.79]">
         <Image src="/footer.png" alt="Image" fill className="object-contain" />
@@ -75,6 +75,20 @@ const WebSiteFooter = () => {
                 </li>
               ))}
             </ul>
+            <ul className="flex items-center gap-8 text-secondary">
+              {socialMedia.map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center border border-white rounded-md w-10 h-10 justify-center"
+                  >
+                    {item.icon}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </div>
@@ -90,7 +104,7 @@ const WebSiteFooter = () => {
             <span className="text-white">All Rights Reserved</span>
             {/* <span className="md:block hidden">|</span> */}
           </div>
-          <p className="text-white!">
+          <p className="text-white! text-sm">
             Crafted with care by{" "}
             <Link
               href="https://www.fielmente.com/"

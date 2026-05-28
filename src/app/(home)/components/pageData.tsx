@@ -1,4 +1,5 @@
 import { landingPageData } from "@/app/landing-page/components/landingPageData";
+import { contact } from "@/utils/constent";
 import {
   CloudIcon,
   GpsIcon,
@@ -6,6 +7,7 @@ import {
   SleepsIcon,
   WindIcon,
 } from "@/utils/webSiteIcon";
+import { constants } from "buffer";
 
 export const homePageData = {
   titles: [
@@ -37,11 +39,11 @@ export const homePageData = {
 
   escapeSection: {
     image: "/home/escape.jpg",
-    title: "A HIDDEN FOREST RETREAT SET AWAY FROM ROADS AND CROWDS",
-    heading: `Accessible through a Short Scenic Forest Walk that Preserves the Silence & Exclusivity of the Property!`,
+    title: "FAR AWAY FROM DUTY, CROWDS, AND CHAOS.",
+    heading: `A luxury slow-living escape in the middle of nowhere, surrounded by 360° mountain views, untouched nature, nearby rivers and treks.`,
     cta: {
       label: "PLAN YOUR EXCAPE",
-      href: "/about",
+      href: contact.WhatsappCta,
     },
   },
 
@@ -91,46 +93,40 @@ export const homePageData = {
       'Days arranged like <span class="italic text-secondary "> Stories! </span>',
     description:
       "Curated rituals designed by our hosts, none of them on a schedule, all of them on the slow side of time.",
+    footerNote:
+      "**Food and beverages are chargeable separately for all setups and experiences.",
     experiences: [
       {
-        image: "/exp1.jpg",
-        title: "Himalayan Breakfasts",
-        timing: "Sunrise · In-tent",
-      },
-      {
-        image: "/exp-8.png",
+        image: "/home/exp-1.png",
         title: "Bonfire",
         timing: "Dusk · Daily",
+        price: "₹2,500 onwards",
+        description:
+          "Private outdoor movie setup with cozy bonfire ambience under the stars.",
       },
       {
-        image: "/exp-2.png",
-        title: "Stargaze Under Zero Light Pollution",
+        image: "/home/exp-2.png",
+        title: "Star Gazing Session",
         timing: "Sunrise · In-tent",
+        price: "₹1,500 onwards",
+        description:
+          "Guided star gazing experience in the peaceful Himalayan night sky.",
       },
       {
-        image: "/exp-3.png",
-        title: "Glacier Stream Picnic",
+        image: "/home/exp-3.png",
+        title: "Sun Downer Setup",
         timing: "Dusk · Daily",
+        price: "₹3,500 onwards",
+        description:
+          "Beautiful sunset setup at a scenic spot perfect for couples and small groups.",
       },
       {
-        image: "/exp-4.png",
-        title: "Cultural night",
+        image: "/home/exp-4.png",
+        title: "Picnic Setup",
         timing: "Sunrise · In-tent",
-      },
-      {
-        image: "/exp-7.png",
-        title: "Movie under the stars",
-        timing: "Dusk · Daily",
-      },
-      {
-        image: "/exp-5.png",
-        title: "Private dining by the river",
-        timing: "Sunrise · In-tent",
-      },
-      {
-        image: "/exp-6.png",
-        title: "Village tour",
-        timing: "Dusk · Daily",
+        price: "₹3,000 onwards",
+        description:
+          "Curated outdoor picnic setup surrounded by nature for a relaxed experience.",
       },
     ],
   },

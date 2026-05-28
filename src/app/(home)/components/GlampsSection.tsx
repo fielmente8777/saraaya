@@ -35,7 +35,7 @@ const GlampsSection: React.FC<Props> = ({
   const filtered = accommodations.filter((acc) => acc.title === selectRoom);
 
   return (
-    <SectionWithContainer sectionClassName="sticky-section lg:h-[150dvh] bg-background">
+    <SectionWithContainer sectionClassName="relative bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] lg:gap-8">
         <div className="space-y-6">
           <p className="flex items-center gap-2 text-secondary">

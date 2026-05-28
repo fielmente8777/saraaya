@@ -2,7 +2,13 @@ import { contact } from "@/utils/constent";
 
 import { CallIcon, LocationIcon, MailIcon } from "@/utils/webSiteIcon";
 import { navData } from "../navbar/navData";
-import { FillCallIcon, FillLocationIcon, FillMailIcon } from "@/utils/icons";
+import {
+  FbIcon,
+  FillCallIcon,
+  FillLocationIcon,
+  FillMailIcon,
+  IgIcon,
+} from "@/utils/icons";
 
 interface FooterData {
   logo: string;
@@ -39,6 +45,17 @@ interface WebsiteFooterData {
     }[];
   }[];
 }
+
+export const socialMedia = [
+  {
+    icon: <FbIcon />,
+    href: contact.socialMedia.facebook,
+  },
+  {
+    icon: <IgIcon />,
+    href: contact.socialMedia.instagram,
+  },
+];
 
 export const footerData: FooterData = {
   logo: "/logo.png",

@@ -36,7 +36,7 @@ const MountainSection: React.FC<MountainSectionProps> = ({
             </div>
 
             {/* Center Content */}
-            <div className="flex flex-col ">
+            <div className="flex flex-col gap-6">
               {/* Fixed Heading */}
               <p className="text-center text-sm max-md:px-4 text-secondary flex items-center gap-2 justify-center uppercase">
                 <span className="w-10 bg-secondary h-px inline-block" />
@@ -46,7 +46,7 @@ const MountainSection: React.FC<MountainSectionProps> = ({
               <SectionHeading title={heading} textCenter />
 
               {/* Current Card Content */}
-              <div className="flex flex-col justify-center max-md:px-4">
+              <div className="flex flex-col gap-4 justify-center max-md:px-4">
                 <div className="relative mx-auto w-full max-w-[100px] aspect-[4/2]">
                   <Image
                     src={card.icon}

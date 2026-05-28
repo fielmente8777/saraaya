@@ -20,14 +20,14 @@ const About: React.FC<AboutProps> = ({
   hostedText,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="sticky-section bg-[#FFF9E1]">
+    <SectionWithContainer sectionClassName="relative bg-[#FFF9E1]">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
         <div className="gap-6 flex flex-col justify-center">
           <p className="uppercase text-secondary flex items-center gap-2">
             <span className="w-10 bg-secondary h-px" />
             {title}
           </p>
-          <SectionHeading title={heading} />
+          <SectionHeading title={heading} titleClassName="lg:text-[5rem]/[5rem]" />
           <div className="relative aspect-square w-full lg:hidden">
             <div className="absolute z-10 aspect-square w-26 border-t border-l border-secondary -top-2 -left-2" />
             <div className="absolute z-10 aspect-square w-26 border-r border-b border-secondary -bottom-2 -right-2" />

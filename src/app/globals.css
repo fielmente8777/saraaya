@@ -12,8 +12,8 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-light: var(--light);
-  --font-body: var(--font-montserrat);
-  --font-primary: var(--font-playfair-display);
+  --font-body: var(--font-inter);
+  --font-primary: var(--font-minion);
 }
 
 

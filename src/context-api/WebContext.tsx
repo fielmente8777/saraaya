@@ -4,11 +4,15 @@ import { createContext, useContext, useState } from "react";
 interface WebContextProps {
   isOpenNavBar: boolean;
   setIsOpenNavBar: React.Dispatch<React.SetStateAction<boolean>>;
+  openInfoPopup: boolean;
+  setOpenInfoPopup: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const WebContext = createContext<WebContextProps>({
   isOpenNavBar: false,
   setIsOpenNavBar: () => {},
+  openInfoPopup: false,
+  setOpenInfoPopup: () => {},
 });
 
 interface WebProviderProps {
@@ -16,9 +20,12 @@ interface WebProviderProps {
 }
 export const WebProvider: React.FC<WebProviderProps> = ({ children }) => {
   const [isOpenNavBar, setIsOpenNavBar] = useState(false);
+  const [openInfoPopup, setOpenInfoPopup] = useState(false);
   const value = {
     isOpenNavBar,
     setIsOpenNavBar,
+    openInfoPopup,
+    setOpenInfoPopup,
   };
   return <WebContext.Provider value={value}>{children}</WebContext.Provider>;
 };
