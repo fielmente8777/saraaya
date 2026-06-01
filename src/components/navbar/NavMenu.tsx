@@ -10,16 +10,16 @@ import { navData } from "./navData";
 const NavMenu = () => {
   const { isOpenNavBar, setIsOpenNavBar } = useWebContext();
 
-  useEffect(() => {
-    if (isOpenNavBar) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpenNavBar]);
+  // useEffect(() => {
+  //   if (isOpenNavBar) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isOpenNavBar]);
 
   return (
     <div
