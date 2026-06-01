@@ -1,23 +1,8 @@
+import { Props } from "@/@types/type";
 import { SectionWithContainer } from "@/components/sectionComponants";
+import AmenitiesSlider from "@/components/sliders/AmenitiesSlider";
 import Image from "next/image";
 import Link from "next/link";
-import { JSX } from "react";
-
-interface Props {
-  id: string;
-  title: string;
-  image: string;
-  description: string;
-  amenities: {
-    title: string;
-    icon: JSX.Element;
-  }[];
-  price?: string;
-  ctas: {
-    label: string;
-    href: string;
-  }[];
-}
 
 const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
   return (
@@ -26,11 +11,11 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
         <SectionWithContainer
           key={index}
           sectionClassName="bg-background sticky-section lg:h-[110dvh]"
-          containerClassName={`${index % 2 === 0 ? "lg:mr-0!" : "lg:ml-0!"}`}
+          containerClassName={`xl:max-w-[1410px]! ${index % 2 === 0 ? "lg:mr-0!" : "lg:ml-0!"}`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-7 gap-8">
             <div
-              className={`flex flex-col gap-4 lg:col-span-3 justify-between ${index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"}`}
+              className={`flex flex-col gap-4 lg:col-span-3 justify-between  ${index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"}`}
             >
               <h2 className="lg:text-[2.5rem] text-2xl text-primary flex items-center gap-4">
                 <span className="text-secondary text-lg">{card.id}</span>
@@ -55,6 +40,9 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
                   </li>
                 ))}
               </ul>
+              {/* <div className="overflow-hidden!">
+                <AmenitiesSlider amenities={card.amenities} />
+              </div> */}
               <div className="flex max-lg:flex-col gap-6 items-center justify-between">
                 {card.ctas.map((cta, index) => (
                   <Link

@@ -1,6 +1,8 @@
 import { Container, Section } from "@/components/sectionComponants";
 import Image from "next/image";
 import ReviewsSlider from "./slider/ReviewsSlider";
+import { LazyLoadedVideo } from "@/components/Video";
+import { SectionHeading } from "@/components/typography";
 
 interface ReviewsSectionProps {
   title: string;
@@ -12,35 +14,48 @@ interface ReviewsSectionProps {
 const ReviewsSection: React.FC<ReviewsSectionProps> = ({ title, reviews }) => {
   return (
     <Section className="relative" defaultPadding={false}>
-      <div className="relative bg-[#1F2D2A] h-screen aspect-auto">
+      <div className="relative bg-[#1F2D2A] aspect-auto">
         <Image
           src="/home/reviews-bg.png"
           alt="Image"
           fill
           className="object-cover"
         />
-        <div className="flex items-center justify-center z-10 lg:py-16 py-10">
-          <Container className="space-y-8">
-            <div className="md:space-y-14 space-y-8">
-              <h2 className="text-white text-sm flex items-center gap-4 justify-center">
-                <span className="w-10 h-px bg-white" />
-                {title}
-                <span className="w-10 h-px bg-white" />
-              </h2>
-              <span className="flex items-center justify-center">
-                <Foo />
-              </span>
-              <ReviewsSlider cards={reviews} />
+        <div className="md:py-20 py-10">
+          <Container className="grid lg:grid-cols-2 grid-cols-1 gap-16 h-full items-center ">
+            <div className="relative aspect-square w-full lg:block hidden">
+              <LazyLoadedVideo
+                src="/video/Saraya-Room-Reel-2.mp4"
+                poster="/video/Saraya-Room-Reel-2.png"
+                controls={false}
+                muted
+                autoPlay
+              />
             </div>
-            <div className="flex items-center justify-center gap-6">
-              <button className="text-white border flex items-center justify-center gap-2 testimonials-prev px-5 py-5 active:scale-95">
-                <PrevIcon />
-                <span className="sr-only">Previous</span>
-              </button>
-              <button className="text-white border flex items-center justify-center gap-2 testimonials-next px-5 py-5 active:scale-95">
-                <span className="sr-only">Next</span>
-                <NextIcon />
-              </button>
+            <div className="flex items-center justify-center ">
+              <Container className="space-y-8">
+                <div className="md:space-y-10 space-y-8">
+                  <h2
+                    className="text-3xl md:text-5xl text-white font-primary"
+                    dangerouslySetInnerHTML={{ __html: title }}
+                  />
+
+                  <span className="block">
+                    <Foo />
+                  </span>
+                  <ReviewsSlider cards={reviews} />
+                </div>
+                <div className="flex items-center gap-6">
+                  <button className="text-white border flex items-center justify-center gap-2 testimonials-prev px-5 py-5 active:scale-95">
+                    <PrevIcon />
+                    <span className="sr-only">Previous</span>
+                  </button>
+                  <button className="text-white border flex items-center justify-center gap-2 testimonials-next px-5 py-5 active:scale-95">
+                    <span className="sr-only">Next</span>
+                    <NextIcon />
+                  </button>
+                </div>
+              </Container>
             </div>
           </Container>
         </div>

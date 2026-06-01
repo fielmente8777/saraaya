@@ -1,5 +1,6 @@
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
+import { LazyLoadedVideo } from "@/components/Video";
 import Image from "next/image";
 
 interface AboutProps {
@@ -31,7 +32,8 @@ const About: React.FC<AboutProps> = ({
           <div className="relative aspect-square w-full lg:hidden">
             <div className="absolute z-10 aspect-square w-26 border-t border-l border-secondary -top-2 -left-2" />
             <div className="absolute z-10 aspect-square w-26 border-r border-b border-secondary -bottom-2 -right-2" />
-            <Image src={image} alt="Image" fill className="object-cover" />
+            {/* <Image src={image} alt="Image" fill className="object-cover" /> */}
+            <LazyLoadedVideo src="/video/Saraya-Room-Reel.mp4" poster="/video/Saraya-Room-Reel.png" controls={false} muted autoPlay />
           </div>
           <div className="w-[153px] aspect-4/2 relative ">
             <Image src={logo} alt="Image" fill className="object-cover" />
@@ -51,7 +53,8 @@ const About: React.FC<AboutProps> = ({
         <div className="relative aspect-square w-full lg:block hidden">
           <div className="absolute z-10 aspect-square w-26 border-t border-l border-secondary -top-2 -left-2" />
           <div className="absolute z-10 aspect-square w-26 border-r border-b border-secondary -bottom-2 -right-2" />
-          <Image src={image} alt="Image" fill className="object-cover" />
+          {/* <Image src={image} alt="Image" fill className="object-cover" /> */}
+          <LazyLoadedVideo src="/video/Saraya-Room-Reel.mp4" poster="/video/Saraya-Room-Reel.png" controls={false} muted autoPlay />
         </div>
       </div>
     </SectionWithContainer>

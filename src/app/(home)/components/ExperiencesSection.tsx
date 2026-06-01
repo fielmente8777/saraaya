@@ -54,15 +54,15 @@ const ExperiencesSection: React.FC<Props> = ({
                   className="object-cover"
                 />
               </div>
-              <div className="flex max-lg:flex-col items-center justify-between">
+              <div className="flex  items-center justify-between">
                 <p className="text-white text-2xl font-primary">{item.title}</p>
                 <p className="text-white text-sm uppercase">{item.price}</p>
               </div>
-              <p className="text-white lg:text-lg">{item.description}</p>
+              <p className="text-white lg:text-lg max-md:text-sm max-md:text-center">{item.description}</p>
             </div>
           ))}
         </div>
-        <p className="text-white  lg:w-2/5 lg:ml-auto lg:text-end lg:-mt-10">
+        <p className="text-white  lg:w-2/5 lg:ml-auto lg:text-end text-center lg:-mt-10">
           {footerNote}
         </p>
       </SectionWithContainer>

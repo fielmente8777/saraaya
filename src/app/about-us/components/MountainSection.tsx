@@ -1,4 +1,4 @@
-import { SectionWithContainer } from "@/components/sectionComponants";
+import { Container, Section, SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import Image from "next/image";
 import MountainSlider from "./slider/MountainSlider";
@@ -18,13 +18,12 @@ const MountainSection: React.FC<MountainSectionProps> = ({
   cards,
 }) => {
   return (
-    <SectionWithContainer
-      sectionClassName="bg-background"
-      containerClassName="max-md:px-0!"
+    <Section
+      className="bg-background"
     >
       {cards.map((card, index) => (
-        <div key={index} className="sticky top-0 bg-background">
-          <div className=" h-[75dvh] items-center grid grid-cols-1 lg:grid-cols-[1fr_1.6fr_1fr] gap-8 lg:gap-16 pt-8">
+        <div key={index} className="lg:sticky relative lg:top-0 bg-background">
+          <Container className=" lg:h-[75dvh] items-center grid grid-cols-1 lg:grid-cols-[1fr_1.6fr_1fr] gap-8 lg:gap-16 pt-8">
             {/* Left Image */}
             <div className="relative w-full aspect-[4/4.5] -rotate-8 -top-16 overflow-hidden lg:block hidden">
               <Image
@@ -70,10 +69,10 @@ const MountainSection: React.FC<MountainSectionProps> = ({
                 className="object-cover"
               />
             </div>
-          </div>
+          </Container>
         </div>
       ))}
-    </SectionWithContainer>
+    </Section>
   );
 };
 

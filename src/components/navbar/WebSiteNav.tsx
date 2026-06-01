@@ -7,6 +7,7 @@ import MenuButton from "./MenuButton";
 import Image from "next/image";
 import LinkButton from "../buttons/LinkButton";
 import NavMenu from "./NavMenu";
+import { contact } from "@/utils/constent";
 
 const WebSiteNav = () => {
   const pathname = usePathname();
@@ -68,10 +69,10 @@ const WebSiteNav = () => {
       `}
       >
         {/* Top Navbar */}
-        <nav className="max_width flex items-center justify-between py-4">
+        <nav className="max_width flex max-lg:flex-row-reverse items-center justify-between py-4">
           <MenuButton color={isTransparent ? "white" : "primary"} />
 
-          <div className="relative aspect-[4/.89] w-full max-w-40 lg:ml-20">
+          <div className="relative aspect-[4/.89] w-full max-w-40 lg:ml-20 ">
             <Image
               src={isTransparent ? "/logo-white.png" : "/logo-green.png"}
               alt="Logo"
@@ -82,7 +83,7 @@ const WebSiteNav = () => {
           </div>
 
           <LinkButton
-            href="/"
+            href={contact.WhatsappCta}
             label="reserve"
             target="_blank"
             rel="noopener noreferrer"

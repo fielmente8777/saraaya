@@ -17,7 +17,7 @@ const Banner: React.FC<BannerProps> = ({
   return (
     <section >
       <SectionWithContainer sectionClassName="relative after:content-[''] after:absolute after:inset-0 after:z-[-2] after:bg-[#FFF9E1]">
-        <div className="absolute inset-x-0 bottom-0 h-100 bg-primary z-[-1]"></div>
+        <div className="absolute inset-x-0 bottom-0 lg:h-100 h-120 bg-primary z-[-1]"></div>
         <div className="text-center space-y-8">
           <p className="text-secondary flex items-center justify-center gap-2">
             {" "}

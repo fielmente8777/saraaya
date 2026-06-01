@@ -19,14 +19,14 @@ export const storyPageData = {
           "Steeped in the spiritual legacy of the Lam Dal and Kareri waters, Saraaya sits on land echoing with the footsteps of pilgrims and mountain legends. Here, the air carries a different weight, a quiet, hallowed energy that invites reflection and deep inner peace.",
       },
       {
-        images: ["/about/3.jpg", "/about/4.jpg"],
+        images: ["/about/3.png", "/about/4.png"],
         icon: "/about/Vector-1.png",
         subTitle: "The Art of the Reset",
         description:
           "In a world that never stops, Saraaya is the pause button. Designed for profound silence and reconnection, we believe that slowing down isn't just a luxury, it is the entire point. Here, the Himalayan breeze does the healing, and the rhythm of the forest dictates your day.",
       },
       {
-        images: ["/about/5.jpg", "/about/6.jpg"],
+        images: ["/about/5.png", "/about/6.png"],
         icon: "/about/Vector-2.png",
         subTitle: "Untamed Elegance",
         description:

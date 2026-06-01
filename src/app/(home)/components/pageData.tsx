@@ -7,7 +7,6 @@ import {
   SleepsIcon,
   WindIcon,
 } from "@/utils/webSiteIcon";
-import { constants } from "buffer";
 
 export const homePageData = {
   titles: [
@@ -18,10 +17,11 @@ export const homePageData = {
   ],
 
   banner: {
-    video: {
-      src: "/home/Copy-of-Drone-clips.mp4",
-      poster: "/home/Copy-of-Drone-clips.png",
-    },
+    // video: {
+    //   src: "/home/Copy-of-Drone-clips.mp4",
+    //   poster: "/home/Copy-of-Drone-clips.png",
+    // },
+    images: ["/bnr-1.png", "/bnr-2.png", "/bnr-3.png", "/bnr-4.png"],
   },
   about: {
     image: "/home/about-img.png",
@@ -40,7 +40,7 @@ export const homePageData = {
   escapeSection: {
     image: "/home/escape.jpg",
     title: "FAR AWAY FROM DUTY, CROWDS, AND CHAOS.",
-    heading: `A luxury slow-living escape in the middle of nowhere, surrounded by 360° mountain views, untouched nature, nearby rivers and treks.`,
+    heading: `Experience slow luxury in the heart of nature, with panoramic mountain views, nearby rivers, & endless trails to explore.`,
     cta: {
       label: "PLAN YOUR EXCAPE",
       href: contact.WhatsappCta,
@@ -143,7 +143,7 @@ export const homePageData = {
   // },
 
   reviewsSection: {
-    title: "GUESTS REVIEWS",
+    title: "Guests <i>Reviews</i>",
     reviews: landingPageData.testimonialData.testimonials,
   },
 };

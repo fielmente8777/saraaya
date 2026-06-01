@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export interface TestimonialType {
   title: string;
   images: string[];
@@ -48,4 +50,20 @@ export interface RoomsType {
     label: string;
     href: string;
   };
+}
+
+export interface Props {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  amenities: {
+    title: string;
+    icon: JSX.Element;
+  }[];
+  price?: string;
+  ctas: {
+    label: string;
+    href: string;
+  }[];
 }

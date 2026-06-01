@@ -30,7 +30,7 @@ const NavMenu = () => {
         overflow-hidden
         ${
           isOpenNavBar
-            ? "max-h-[calc(100dvh-10px)] opacity-100"
+            ? "max-h-dvh h-dvh opacity-100"
             : "max-h-0 opacity-0"
         }
       `}

@@ -1,4 +1,12 @@
 import {
+  AttachedModernBathroomsIcon,
+  HeatersIcon,
+  PremiumLinensIcon,
+  PrivateDeckIcon,
+  SpaciousLuxuryIcon,
+} from "@/utils/amenitiesIcons2";
+import { contact } from "@/utils/constent";
+import {
   AmenintiesIcon,
   BreakFastIcon,
   DeckIcon,
@@ -41,16 +49,21 @@ export const accommodationPageData = {
       title: "DEVDAR — THE KEEPER",
       image: "/rooms/1.jpg",
       description:
-        'Named after the sacred deodar cedar - the "wood of the gods" - that stands tall and unwavering through centuries. Devdar holds space the way the oldest trees do: quietly, deeply, and without question.',
+        "Named after the sacred deodar cedar — often called the “wood of the gods” — a tree revered for its strength, resilience, and timeless presence in the Himalayas. Standing tall through centuries of changing seasons, the deodar symbolizes endurance, protection, and a deep connection to nature. Inspired by these qualities, Devdar is more than just a place; it is a sanctuary designed to offer peace, comfort, and belonging. Like the ancient cedar forests that have sheltered travelers for generations, Devdar holds space quietly and graciously, inviting guests to slow down, reconnect, and immerse themselves in the beauty of the natural world. Here, every moment is shaped by tranquility, authenticity, and the enduring spirit of the mountains.",
       amenities: [
-        { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SQFTIcon /> },
-        { title: "BREAKFAST", icon: <BreakFastIcon /> },
+        { title: "Spacious luxury tents", icon: <SpaciousLuxuryIcon /> },
+        {
+          title: "Attached modern bathrooms",
+          icon: <AttachedModernBathroomsIcon />,
+        },
+        { title: "Premium linens & amenities", icon: <PremiumLinensIcon /> },
+        { title: "Heaters & fans all seasons", icon: <HeatersIcon /> },
+        { title: "Private decks", icon: <PrivateDeckIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
-        { label: "RESERVE", href: "#" },
-        { label: "CALL NOW", href: "#" },
+        { label: "RESERVE", href: contact.WhatsappCta },
+        { label: "CALL NOW", href: contact.callCta },
       ],
     },
     {
@@ -58,16 +71,21 @@ export const accommodationPageData = {
       image: "/rooms/2.jpg",
       title: "Rai — The Watcher",
       description:
-        "Named after the ban oak, rooted deep and still - the quiet guardian of the Himalayan forest floor. Rai sees everything and says little, offering shade, shelter, and the comfort of steady presence.",
+        "Named after the ban oak, rooted deep and still — the quiet guardian of the Himalayan forest floor. Strong yet unassuming, the ban oak has long been a symbol of stability, resilience, and quiet wisdom in the mountain landscape. Rai embodies these qualities, offering a space that feels grounded, warm, and enduring. Like the ancient oaks that shelter countless forms of life beneath their canopy, Rai provides comfort, protection, and a sense of belonging. It is a place where nature’s calm presence can be felt in every detail, inviting guests to slow down, breathe deeply, and find peace in the simplicity of the surroundings. Steady, timeless, and deeply connected to the land, Rai is a retreat that nurtures both rest and reflection.",
       amenities: [
-        { title: "CUSTOM TOILETRY ESSENTIALS", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SQFTIcon /> },
-        { title: "BREAKFAST", icon: <BreakFastIcon /> },
+        { title: "Spacious luxury tents", icon: <SpaciousLuxuryIcon /> },
+        {
+          title: "Attached modern bathrooms",
+          icon: <AttachedModernBathroomsIcon />,
+        },
+        { title: "Premium linens & amenities", icon: <PremiumLinensIcon /> },
+        { title: "Heaters & fans all seasons", icon: <HeatersIcon /> },
+        { title: "Private decks", icon: <PrivateDeckIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
-        { label: "RESERVE", href: "#" },
-        { label: "CALL NOW", href: "#" },
+        { label: "RESERVE", href: contact.WhatsappCta },
+        { label: "CALL NOW", href: contact.callCta },
       ],
     },
     {
@@ -75,16 +93,21 @@ export const accommodationPageData = {
       image: "/rooms/3.jpg",
       title: "BURANSH — THE NURTURER",
       description:
-        "Named after the rhododendron, whose crimson blooms bring the first warmth to the mountains each spring. Buransh is a gentle reminder that softness is its own kind of strength.",
+        "Named after the rhododendron, whose crimson blooms bring the first warmth to the mountains each spring. Buransh is a gentle reminder that softness is its own kind of strength. Flourishing against rugged slopes and harsh winters, the rhododendron arrives as a symbol of renewal, resilience, and quiet joy. Its vibrant blossoms transform the landscape, painting the hillsides with color and life after months of stillness. Inspired by this spirit, Buransh offers a space that feels both uplifting and restorative — a retreat where beauty is found in simplicity and strength is expressed through grace. Like the flower that announces the arrival of a new season, Buransh invites guests to embrace moments of calm, connection, and gentle transformation amidst the timeless rhythms of the mountains.",
       amenities: [
-        { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SQFTIcon /> },
-        { title: "BREAKFAST", icon: <BreakFastIcon /> },
+        { title: "Spacious luxury tents", icon: <SpaciousLuxuryIcon /> },
+        {
+          title: "Attached modern bathrooms",
+          icon: <AttachedModernBathroomsIcon />,
+        },
+        { title: "Premium linens & amenities", icon: <PremiumLinensIcon /> },
+        { title: "Heaters & fans all seasons", icon: <HeatersIcon /> },
+        { title: "Private decks", icon: <PrivateDeckIcon /> },
       ],
       price: "From ₹ 12000/-",
       ctas: [
-        { label: "RESERVE", href: "#" },
-        { label: "CALL NOW", href: "#" },
+        { label: "RESERVE", href: contact.WhatsappCta },
+        { label: "CALL NOW", href: contact.callCta },
       ],
     },
     {
@@ -92,16 +115,21 @@ export const accommodationPageData = {
       image: "/rooms/4.jpg",
       title: "Kail — The Wanderer",
       description:
-        "Named after the Himalayan blue pine, whose seeds travel far on the wind before finding ground. Kail is for those who've journeyed long and are ready to arrive - not at a destination, but at a feeling.",
+        "Named after the Himalayan blue pine, whose seeds travel far on the wind before finding ground. Kail is for those who’ve journeyed long and are ready to arrive — not at a destination, but at a feeling. Towering gracefully across the mountain slopes, the blue pine is known for its adaptability, endurance, and quiet elegance. Its seeds drift across valleys and ridgelines, carried by unseen currents until they find a place to take root and thrive. Inspired by this journey, Kail is a space that celebrates both movement and stillness — a place where wandering gives way to belonging. Here, the mountains invite you to slow down, settle into the rhythm of nature, and reconnect with what matters most. Like the blue pine itself, Kail stands as a symbol of resilience, growth, and the profound comfort of finding your place in the world.",
       amenities: [
-        { title: "SLEEPS 2", icon: <SleepsIcon /> },
-        { title: "425 SQ FT", icon: <SQFTIcon /> },
-        { title: "BREAKFAST", icon: <BreakFastIcon /> },
+        { title: "Spacious luxury tents", icon: <SpaciousLuxuryIcon /> },
+        {
+          title: "Attached modern bathrooms",
+          icon: <AttachedModernBathroomsIcon />,
+        },
+        { title: "Premium linens & amenities", icon: <PremiumLinensIcon /> },
+        { title: "Heaters & fans all seasons", icon: <HeatersIcon /> },
+        { title: "Private decks", icon: <PrivateDeckIcon /> },
       ],
-      
+
       ctas: [
-        { label: "RESERVE", href: "#" },
-        { label: "CALL NOW", href: "#" },
+        { label: "RESERVE", href: contact.WhatsappCta },
+        { label: "CALL NOW", href: contact.callCta },
       ],
     },
   ],
@@ -113,7 +141,7 @@ export const accommodationPageData = {
       "Mornings Wrapped in Mist. Evenings Lit by Fire. Nights Filled with Stars.",
     cta: {
       label: "PLAN YOUR EXCAPE",
-      href: "/contact-us",
+      href: contact.WhatsappCta,
     },
   },
 
@@ -125,26 +153,26 @@ export const accommodationPageData = {
     totalSlides: "09",
   },
 
-title: [
-  {
-    icon: <RoomTentIcon />,
-    title: "SPACIOUS LUXURY TENTS",
-  },
-  {
-    icon: <TapeIcon />,
-    title: "ATTACHED MODERN BATHROOMS",
-  },
-  {
-    icon: <AmenintiesIcon />,
-    title: "PREMIUM LINENS & AMENITIES",
-  },
-  {
-    icon: <FanIcon />,
-    title: "HEATERS & FANS ALL SEASONS",
-  },
-  {
-    icon: <DeckIcon />,
-    title: "PRIVATE DECKS",
-  },
-],
+  title: [
+    {
+      icon: <RoomTentIcon />,
+      title: "SPACIOUS LUXURY TENTS",
+    },
+    {
+      icon: <TapeIcon />,
+      title: "ATTACHED MODERN BATHROOMS",
+    },
+    {
+      icon: <AmenintiesIcon />,
+      title: "PREMIUM LINENS & AMENITIES",
+    },
+    {
+      icon: <FanIcon />,
+      title: "HEATERS & FANS ALL SEASONS",
+    },
+    {
+      icon: <DeckIcon />,
+      title: "PRIVATE DECKS",
+    },
+  ],
 };

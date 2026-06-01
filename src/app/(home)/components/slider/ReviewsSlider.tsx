@@ -23,8 +23,8 @@ const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
         speed={1000}
         className="w-full"
         renderSlide={(card) => (
-          <div className="text-center text-white space-y-4">
-            <p className="text-[1.375rem]">{card.text}</p>
+          <div className=" text-white space-y-4">
+            <p className="text-xl">{card.text}</p>
             <p className="capitalize">{card.name}</p>
           </div>
         )}
