@@ -1,12 +1,15 @@
 "use client";
 import { TestimonialType } from "@/@types/type";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
+import { useWebContext } from "@/context-api/WebContext";
 import { FC } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 interface TestimonialsSliderProps {
   cards: TestimonialType["testimonials"];
 }
 const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
+  const { setCurrent, setTotal } = useWebContext();
+
   return (
     <div className="w-full max-w-7xl mx-auto">
       <SwiperCarousel
@@ -19,6 +22,8 @@ const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
           nextEl: ".testimonials-next",
           prevEl: ".testimonials-prev",
         }}
+        onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
+        onSwiper={(swiper) => setTotal(swiper.slides.length)}
         autoplay={{ delay: 2500 }}
         speed={1000}
         className="w-full"

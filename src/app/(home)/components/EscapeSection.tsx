@@ -34,8 +34,8 @@ const EscapeSection: React.FC<EscapeSectionProps> = ({
         />
       </div>
       <div className="absolute inset-0 flex  items-center justify-center gap-4 z-10">
-        <Container className="text-center flex flex-col gap-6">
-          <p className="uppercase  text-white flex max-md:flex-col items-center gap-2">
+        <Container className=" flex flex-col gap-6">
+          <p className="uppercase text-center  text-white flex max-md:flex-col items-center justify-center gap-2">
             <span className="w-10 bg-white h-px" />
             {title}
             <span className="w-10 bg-white h-px" />

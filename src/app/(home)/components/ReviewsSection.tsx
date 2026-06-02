@@ -1,8 +1,9 @@
+"use client";
+import { LazyLoadedVideo } from "@/components/Video";
 import { Container, Section } from "@/components/sectionComponants";
+import { useWebContext } from "@/context-api/WebContext";
 import Image from "next/image";
 import ReviewsSlider from "./slider/ReviewsSlider";
-import { LazyLoadedVideo } from "@/components/Video";
-import { SectionHeading } from "@/components/typography";
 
 interface ReviewsSectionProps {
   title: string;
@@ -12,18 +13,19 @@ interface ReviewsSectionProps {
   }[];
 }
 const ReviewsSection: React.FC<ReviewsSectionProps> = ({ title, reviews }) => {
+  const { current, total } = useWebContext();
   return (
     <Section className="relative" defaultPadding={false}>
-      <div className="relative bg-[#1F2D2A] aspect-auto">
+      <div className="relative bg-[#1F2D2A] lg:aspect-16/8 aspect-4/7">
         <Image
           src="/home/reviews-bg.png"
           alt="Image"
           fill
           className="object-cover"
         />
-        <div className="md:py-20 py-10">
+        <div className="md:py-20 py-10 absolute inset-0 z-10">
           <Container className="grid lg:grid-cols-2 grid-cols-1 gap-16 h-full items-center ">
-            <div className="relative aspect-square w-full lg:block hidden">
+            <div className="relative aspect-square w-full">
               <LazyLoadedVideo
                 src="/video/Saraya-Room-Reel-2.mp4"
                 poster="/video/Saraya-Room-Reel-2.png"
@@ -46,11 +48,14 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ title, reviews }) => {
                   <ReviewsSlider cards={reviews} />
                 </div>
                 <div className="flex items-center gap-6">
-                  <button className="text-white border flex items-center justify-center gap-2 testimonials-prev px-5 py-5 active:scale-95">
+                  <button className="text-white border flex items-center justify-center gap-2 testimonials-prev px-5 py-5 active:scale-95 pointer-events-auto">
                     <PrevIcon />
                     <span className="sr-only">Previous</span>
                   </button>
-                  <button className="text-white border flex items-center justify-center gap-2 testimonials-next px-5 py-5 active:scale-95">
+                  <span className="text-white">
+                    0{current} - 0{total}
+                  </span>
+                  <button className="text-white border flex items-center justify-center gap-2 testimonials-next px-5 py-5 active:scale-95 pointer-events-auto">
                     <span className="sr-only">Next</span>
                     <NextIcon />
                   </button>
