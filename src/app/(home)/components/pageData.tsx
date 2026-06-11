@@ -33,6 +33,8 @@ export const homePageData = {
       `<span class="float-left text-4xl md:text-6xl leading-[0.85] mr-3 font-primary">
         S
       </span>araaya is more than a retreat, it is a sanctuary for the soul. Perched beside a crystalline glacier stream born from sacred alpine peaks, we have harmonized the untamed spirit of the Himalayas with the sophisticated comforts of a premier estate. With only four exclusive glamp suites, your stay is a private communion with the wilderness.,Escape the Noise. Rediscover Your Center.,Leave the city lights behind for a canopy of a billion stars.`,
+
+      'Saraaya was created for people who no longer seek crowded luxury, but meaningful stillness.',
     ],
     hostedText: "Hosted by the Saraaya family, since 2019",
   },
@@ -58,28 +60,28 @@ export const homePageData = {
     accommodations: [
       {
         id: "01",
-        title: "Devdar - The Keeper",
+        title: 'Devdar "The Keeper" ',
         image: "/rooms/Mountain-1.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "02",
-        title: "Rai — The Watcher",
+        title: 'Rai "The Watcher"',
         image: "/rooms/Mountain-2.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "03",
-        title: "Buransh — The Nurturer",
+        title: 'Buransh  "The Nurturer" ',
         image: "/rooms/Mountain-3.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },
       },
       {
         id: "04",
-        title: "Kail — The Wanderer",
+        title: 'Kail " The Wanderer" ',
         image: "/rooms/Mountain-4.png",
         amenities: { title: "SLEEPS 2", icon: <SleepsIcon /> },
         cta: { label: "know more", href: "/rooms" },

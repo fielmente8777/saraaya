@@ -1,6 +1,7 @@
 import { Props } from "@/@types/type";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import AmenitiesSlider from "@/components/sliders/AmenitiesSlider";
+import ImageSlider from "@/components/sliders/ImageSlider";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,12 +25,7 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
               <div
                 className={`w-full lg:col-span-4 lg:hidden relative aspect-4/3 `}
               >
-                <Image
-                  src={card.image}
-                  alt="Image"
-                  fill
-                  className="object-cover"
-                />
+                <ImageSlider images={card.images} />
               </div>
               <p className="text-primary lg:text-lg">{card.description}</p>
               <ul className="flex flex-wrap items-center justify-between border-y-[0.5px] border-[#cacaca]">
@@ -65,12 +61,7 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
             <div
               className={`w-full lg:col-span-4 lg:block hidden relative aspect-4/3 ${index % 2 === 0 ? "lg:order-last" : "lg:order-first"}`}
             >
-              <Image
-                src={card.image}
-                alt="Image"
-                fill
-                className="object-cover"
-              />
+              <ImageSlider images={card.images} />
             </div>
           </div>
         </SectionWithContainer>

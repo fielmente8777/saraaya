@@ -55,7 +55,7 @@ export interface RoomsType {
 export interface Props {
   id: string;
   title: string;
-  image: string;
+  images: string[];
   description: string;
   amenities: {
     title: string;
