@@ -6,7 +6,7 @@ interface BannerProps {
   title: string;
   image: string;
   heading: string;
-  description: string;
+  description: string[];
 }
 const Banner: React.FC<BannerProps> = ({
   title,
@@ -15,7 +15,7 @@ const Banner: React.FC<BannerProps> = ({
   description,
 }) => {
   return (
-    <section >
+    <section>
       <SectionWithContainer sectionClassName="relative after:content-[''] after:absolute after:inset-0 after:z-[-2] after:bg-[#FFF9E1]">
         <div className="absolute inset-x-0 bottom-0 lg:h-100 h-120 bg-primary z-[-1]"></div>
         <div className="text-center space-y-8">
@@ -34,7 +34,13 @@ const Banner: React.FC<BannerProps> = ({
               sizes="100%"
             />
           </div>
-          <p className="text-white relative">{description}</p>
+          <div className="space-y-4">
+            {description.map((item, index) => (
+              <p key={index} className="text-white relative">
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
       </SectionWithContainer>
     </section>

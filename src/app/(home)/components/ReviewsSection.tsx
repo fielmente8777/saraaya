@@ -14,21 +14,22 @@ interface ReviewsSectionProps {
 }
 const ReviewsSection: React.FC<ReviewsSectionProps> = ({ title, reviews }) => {
   const { current, total } = useWebContext();
+
   return (
     <Section className="relative" defaultPadding={false}>
-      <div className="relative bg-[#1F2D2A] lg:aspect-16/8 aspect-4/7">
+      <div className="relative reviews-bg bg-[#1F2D2A]">
         <Image
           src="/home/reviews-bg.png"
           alt="Image"
           fill
           className="object-cover"
         />
-        <div className="md:py-20 py-10 absolute inset-0 z-10">
+        <div className="md:py-20 py-10">
           <Container className="grid lg:grid-cols-2 grid-cols-1 gap-16 h-full items-center ">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full lg:block hidden">
               <LazyLoadedVideo
-                src="/video/Saraya-Room-Reel-2.mp4"
-                poster="/video/Saraya-Room-Reel-2.png"
+                src="/video/Saraya-Room-reel-2.mp4"
+                poster="/video/Saraya-Room-reel-2.png"
                 controls={false}
                 muted
                 autoPlay
@@ -41,7 +42,15 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ title, reviews }) => {
                     className="text-3xl md:text-5xl text-white font-primary"
                     dangerouslySetInnerHTML={{ __html: title }}
                   />
-
+                  <div className="relative aspect-square w-full lg:hidden">
+                    <LazyLoadedVideo
+                      src="/video/Saraya-Room-reel-2.mp4"
+                      poster="/video/Saraya-Room-reel-2.png"
+                      controls={false}
+                      muted
+                      autoPlay
+                    />
+                  </div>
                   <span className="block">
                     <Foo />
                   </span>

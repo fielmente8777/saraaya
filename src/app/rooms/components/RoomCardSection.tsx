@@ -1,8 +1,11 @@
 import { Props } from "@/@types/type";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import AmenitiesSlider from "@/components/sliders/AmenitiesSlider";
-import Image from "next/image";
+import ImageSlider from "@/components/sliders/ImageSlider";
 import Link from "next/link";
+
+
+
 
 const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
   return (
@@ -15,7 +18,7 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-7 gap-8">
             <div
-              className={`flex flex-col gap-4 lg:col-span-3 justify-between  ${index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"}`}
+              className={`flex flex-col gap-4 lg:col-span-3 justify-between w-full ${index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"}`}
             >
               <h2 className="lg:text-[2.5rem] text-2xl text-primary flex items-center gap-4">
                 <span className="text-secondary text-lg">{card.id}</span>
@@ -24,25 +27,20 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
               <div
                 className={`w-full lg:col-span-4 lg:hidden relative aspect-4/3 `}
               >
-                <Image
-                  src={card.image}
-                  alt="Image"
-                  fill
-                  className="object-cover"
-                />
+                <ImageSlider images={card.images} />
               </div>
               <p className="text-primary lg:text-lg">{card.description}</p>
-              <ul className="flex flex-wrap items-center justify-between border-y-[0.5px] border-[#cacaca]">
+              {/* <ul className="flex flex-wrap items-center justify-between border-y-[0.5px] border-[#cacaca]">
                 {card.amenities.map((amenity, index) => (
                   <li key={index} className="flex items-center gap-2 py-2">
                     {amenity.icon}
                     <span className="text-primary">{amenity.title}</span>
                   </li>
                 ))}
-              </ul>
-              {/* <div className="overflow-hidden!">
+              </ul> */}
+              <div className="overflow-hidden!">
                 <AmenitiesSlider amenities={card.amenities} />
-              </div> */}
+              </div>
               <div className="flex max-lg:flex-col gap-6 items-center justify-between">
                 {card.ctas.map((cta, index) => (
                   <Link
@@ -65,12 +63,7 @@ const RoomCardSection: React.FC<{ cards: Props[] }> = ({ cards }) => {
             <div
               className={`w-full lg:col-span-4 lg:block hidden relative aspect-4/3 ${index % 2 === 0 ? "lg:order-last" : "lg:order-first"}`}
             >
-              <Image
-                src={card.image}
-                alt="Image"
-                fill
-                className="object-cover"
-              />
+              <ImageSlider images={card.images} />
             </div>
           </div>
         </SectionWithContainer>

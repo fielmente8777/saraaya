@@ -2,13 +2,14 @@
 import { TestimonialType } from "@/@types/type";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { useWebContext } from "@/context-api/WebContext";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 interface TestimonialsSliderProps {
   cards: TestimonialType["testimonials"];
 }
 const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
   const { setCurrent, setTotal } = useWebContext();
+  const [readMore, setReadMore] = useState(false);
 
   return (
     <div className="w-full max-w-7xl mx-auto">
@@ -29,7 +30,11 @@ const ReviewsSlider: FC<TestimonialsSliderProps> = ({ cards }) => {
         className="w-full"
         renderSlide={(card) => (
           <div className=" text-white space-y-4">
-            <p className="text-xl">{card.text}</p>
+            <p className="text-xl md:block hidden">{card.text}</p>
+            <p className="text-xl md:hidden">
+              {card.text.slice(0, readMore ? card.text.length : 100)}
+              {card.text.length > 100 && <span className="" onClick={() => setReadMore(!readMore)}>  ...read more</span>}
+            </p>
             <p className="capitalize">{card.name}</p>
           </div>
         )}
