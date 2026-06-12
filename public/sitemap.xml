@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://saraayaglamps.com/</loc>
-  <lastmod>2026-04-28T15:35:35+00:00</lastmod>
+  <lastmod>2026-06-12T05:56:49+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://saraayaglamps.com/about-us/</loc>
+  <lastmod>2026-06-12T05:56:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saraayaglamps.com/rooms/</loc>
+  <lastmod>2026-06-12T05:56:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saraayaglamps.com/gallery/</loc>
+  <lastmod>2026-06-12T05:56:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saraayaglamps.com/contact-us/</loc>
+  <lastmod>2026-06-12T05:56:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 

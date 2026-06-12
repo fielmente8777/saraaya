@@ -23,12 +23,12 @@ const PopUpInfo = () => {
   ];
   return (
     <div
-      className={`fixed inset-0 z-30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ease-in-out ${openInfoPopup ? "visible scale-100" : "hidden scale-0"}`}
+      className={`fixed inset-0 z-50 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ease-in-out ${openInfoPopup ? "visible scale-100" : "hidden scale-0"}`}
     >
       <div className="max-w-2xl w-full bg-white relative space-y-3.5 rounded-2xl p-6">
         <button
           onClick={() => setOpenInfoPopup(false)}
-          className="absolute top-2 right-2 w-8 aspect-square flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+          className="absolute top-2 right-2 w-8 text-4xl aspect-square flex items-center justify-center bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
         >
           <span className="sr-only">Close</span>
           <MdClose />

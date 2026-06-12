@@ -6,12 +6,13 @@ import ReviewsSection from "./components/ReviewsSection";
 import GlampsSection from "./components/GlampsSection";
 import ExperiencesSection from "./components/ExperiencesSection";
 import TitleSection from "@/components/TitleSection";
-import ImageSlide from "@/components/banners/ImageSlide";
+// import ImageSlide from "@/components/banners/ImageSlide";
 
 const page = () => {
   return (
     <main>
-      <ImageSlide {...homePageData.banner} />
+      {/* <ImageSlide {...homePageData.banner} /> */}
+      <VideoBanner {...homePageData.banner} />
       <TitleSection titles={homePageData.titles} />
       <About {...homePageData.about} />
       <EscapeSection {...homePageData.escapeSection} />

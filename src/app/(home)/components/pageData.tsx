@@ -17,11 +17,11 @@ export const homePageData = {
   ],
 
   banner: {
-    // video: {
-    //   src: "/home/Copy-of-Drone-clips.mp4",
-    //   poster: "/home/Copy-of-Drone-clips.png",
-    // },
-    images: ["/bnr-1.png", "/bnr-2.png", "/bnr-3.png", "/bnr-4.png"],
+    video: {
+      src: "/home/Copy-of-Drone-clips.mp4",
+      poster: "/home/Copy-of-Drone-clips.png",
+    },
+    // images: ["/bnr-1.png", "/bnr-2.png", "/bnr-3.png", "/bnr-4.png"],
   },
   about: {
     image: "/home/about-img.png",
