@@ -13,16 +13,17 @@ import Image from "next/image";
 import PopUpButton from "@/components/pop-up/PopUpButton";
 import PopUpInfo from "@/components/pop-up/PopUpInfo";
 import localFont from 'next/font/local'
+import Popup from "@/components/Popup";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
 });
 
-// const montserrat = Montserrat({
-//   variable: "--font-montserrat",
-//   subsets: ["latin"],
-// });
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+});
 
 const minion = localFont({
   src: [
@@ -99,7 +100,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${inter.variable} ${minion.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${inter.variable} ${minion.variable} ${montserrat.variable} h-full antialiased`}
     >
       <head>
         <script type="text/javascript" id="clarity">
@@ -173,6 +174,7 @@ export default function RootLayout({
         {/* <!-- End Google Tag Manager (noscript) --> */}
 
         <WebProvider>
+          <Popup/>
           <NavBar />
           {children}
           <Footer />

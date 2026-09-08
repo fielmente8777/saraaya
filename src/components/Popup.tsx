@@ -1,0 +1,310 @@
+"use client";
+
+import { UpIcon } from "@/utils/icons";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const Popup = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [hasBeenDismissed, setHasBeenDismissed] = useState(false);
+
+  useEffect(() => {
+    if (hasBeenDismissed) return;
+
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [hasBeenDismissed]);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setHasBeenDismissed(true);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-[2px]"
+      onClick={handleClose}
+    >
+      <div
+        className="relative w-auto max-w-[780px] overflow-hidden bg-[#F8F7ED] shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* CLOSE BUTTON */}
+        <button
+          type="button"
+          onClick={handleClose}
+          aria-label="Close popup"
+          className="absolute right-3 top-3 z-50 flex h-9 w-9 items-center justify-center text-3xl font-light leading-none text-white transition-transform duration-300 hover:rotate-90"
+        >
+          ×
+        </button>
+
+        {/* IMAGE */}
+        <div className="relative aspect-[595/330] w-full">
+          <Image
+            src="/popup.jpg"
+            alt="Luxury retreat"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="relative bg-[#F8F7ED] px-5 pb-4 pt-5 sm:px-7 sm:pb-5 sm:pt-6">
+          <div className="absolute bottom-0 left-0 z-10">
+            <Image
+              src="/home/design.png"
+              alt=""
+              width={100}
+              height={115}
+              className="h-auto w-[70px] object-contain"
+            />
+          </div>
+
+          {/* TOP RIGHT DECORATION */}
+          <div className="absolute right-0 top-0 z-10">
+            <Image
+              src="/home/design.png"
+              alt=""
+              width={100}
+              height={115}
+              className="h-auto w-[70px] rotate-180 object-contain"
+            />
+          </div>
+          {/* LEFT DECORATION */}
+          {/* <div className="absolute left-3 top-5 hidden sm:block">
+            <div className="grid grid-cols-3 gap-1 opacity-60">
+              {Array.from({ length: 12 }).map((_, index) => (
+                <span
+                  key={index}
+                  className="h-[2px] w-[2px] rounded-full bg-[#C69A45]"
+                />
+              ))}
+            </div>
+          </div> */}
+
+          {/* RIGHT DECORATION */}
+          {/* <div className="absolute right-3 top-5 hidden sm:block">
+            <div className="relative h-12 w-8 opacity-60">
+              <span className="absolute left-1/2 top-0 h-12 w-px -translate-x-1/2 rotate-45 bg-[#C69A45]" />
+              <span className="absolute left-1/2 top-0 h-12 w-px -translate-x-1/2 -rotate-45 bg-[#C69A45]" />
+              <span className="absolute left-1/2 top-1/2 h-8 w-px -translate-x-1/2 rotate-90 bg-[#C69A45]" />
+            </div>
+          </div> */}
+
+          {/* HEADING */}
+          <div className="text-center">
+            <h2 className="font-ivy text-4xl  text-[#263D25] ">
+              Escape <span className="">THE ORDINARY.</span>
+            </h2>
+
+            <p className="mt-1 text-2xl font-light uppercase text-[#C77B32]">
+              YOUR PRIVATE RETREAT AWAITS
+            </p>
+          </div>
+
+          {/* OFFERS */}
+          <div className="mt-5 grid grid-cols-3 divide-x divide-[#C9C5B5]">
+            {/* OFFER 1 */}
+            {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
+              <div className="flex items-start gap-3">
+                <Image
+                  src="/home/offer.png"
+                  alt=""
+                  width={60}
+                  height={60}
+                  className="h-[60px] w-[60px] object-contain shrink-0"
+                />
+              </div>
+
+              <p className="md:text-lg no-wrap font-montserrat font-semibold uppercase leading-tight text-[#20251E] ">
+                PRICES STARTING
+              </p>
+
+              <p className="mt-0.5 text-xl font-bold font-montserrat text-[#263D25] md:text-2xl">
+                ₹11,999*
+              </p>
+
+              <p className="mt-1 text-[9px] text-[#20251E] md:text-sm">
+                (per night)
+              </p>
+            </div> */}
+            <div className="flex items-center justify-center gap-3 px-2 md:pr-10">
+              <Image
+                src="/home/offer.png"
+                alt=""
+                width={60}
+                height={60}
+                className="h-[60px] w-[60px] shrink-0 object-contain"
+              />
+
+              <div className="text-left">
+                <p className="whitespace-nowrap font-montserrat text-sm font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
+                  PRICES STARTING
+                </p>
+
+                <p className="whitespace-nowrap font-montserrat text-xl font-bold text-[#263D25] md:text-2xl">
+                  ₹11,999*
+                </p>
+
+                <p className="font-montserrat text-[9px] text-[#20251E] md:text-sm">
+                  (per night)
+                </p>
+              </div>
+            </div>
+
+            {/* OFFER 2 */}
+            {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
+              <div className="flex items-start gap-3">
+                <Image
+                  src="/home/discount.png"
+                  alt=""
+                  width={60}
+                  height={60}
+                  className="h-[60px] w-[60px] object-contain shrink-0"
+                />
+              </div>
+
+              <p className="text-[10px] font-montserrat font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
+                GET 15%
+              </p>
+
+              <p className="text-xl font-bold font-montserrat leading-none text-[#263D25] md:text-2xl">
+                DISCOUNT
+              </p>
+
+              <p className="mt-1 text-[9px] font-montserrat uppercase leading-tight text-[#20251E] md:text-sm">
+                ON YOUR STAY
+              </p>
+            </div> */}
+            <div className="flex items-center justify-center gap-3 px-2 md:px-0">
+              <Image
+                src="/home/discount.png"
+                alt=""
+                width={60}
+                height={60}
+                className="h-[60px] w-[60px] shrink-0 object-contain"
+              />
+
+              <div className="text-left">
+                <p className="font-montserrat text-sm font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
+                  GET 15%
+                </p>
+
+                <p className="font-montserrat text-xl font-bold leading-none text-[#263D25] md:text-2xl">
+                  DISCOUNT
+                </p>
+
+                <p className="mt-1 font-montserrat text-[9px] uppercase leading-tight text-[#20251E] md:text-sm">
+                  ON YOUR STAY
+                </p>
+              </div>
+            </div>
+
+            {/* OFFER 3 */}
+            {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
+              <div className="flex items-start gap-3">
+                <Image
+                  src="/home/spoon.png"
+                  alt=""
+                  width={60}
+                  height={60}
+                  className="h-[60px] w-[60px] object-contain shrink-0"
+                />
+              </div>
+
+              <p className="text-[10px] font-montserrat font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
+                COMPLIMENTARY
+              </p>
+
+              <p className="text-xl font-bold font-montserrat leading-none text-[#263D25] md:text-2xl">
+                BREAKFAST
+              </p>
+
+              <p className="mt-1 text-[9px] font-montserrat uppercase leading-tight text-[#20251E] md:text-sm">
+                FOR ALL GUESTS
+              </p>
+            </div> */}
+            <div className="flex items-center justify-center gap-3 px-2 md:pl-8">
+               
+              <Image
+                src="/home/spoon.png"
+                alt=""
+                width={60}
+                height={60}
+                className="h-[60px] w-[60px] shrink-0 object-contain"
+              />
+            
+
+              <div className="text-left">
+                <p className="font-montserrat text-sm font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
+                  COMPLIMENTARY
+                </p>
+
+                <p className="font-montserrat text-xl font-bold leading-none text-[#263D25] md:text-2xl">
+                  BREAKFAST
+                </p>
+
+                <p className="mt-1 font-montserrat text-[9px] uppercase leading-tight text-[#20251E] md:text-sm">
+                  FOR ALL GUESTS
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-5 flex justify-center">
+            <Link
+              href="/contact-us"
+              onClick={handleClose}
+              className="w-full max-w-[450px] rounded-[3px] bg-[#C87528] px-5 py-2.5 text-center md:text-base font-montserrat uppercase tracking-wide text-white transition-colors duration-300 hover:bg-[#A95F1D] sm:py-3"
+            >
+              <span className="flex items-center justify-center gap-2">
+                PLAN YOUR GLAMPING ADVENTURE NOW
+                <UpIcon />
+              </span>
+            </Link>
+          </div>
+
+          {/* DISCLAIMER */}
+          <p className="mt-3 text-center text-[8px] font-montserrat text-[#22251F] md:text-[10px]">
+            Offer Valid for a Limited Time. T&Cs apply. Direct bookings only.
+          </p>
+
+          {/* BOTTOM DECORATION */}
+          {/* <div className="absolute bottom-2 right-3 hidden sm:block">
+            <div className="grid grid-cols-4 gap-1 opacity-60">
+              {Array.from({ length: 16 }).map((_, index) => (
+                <span
+                  key={index}
+                  className="h-[2px] w-[2px] rounded-full bg-[#C69A45]"
+                />
+              ))}
+            </div>
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Popup;
