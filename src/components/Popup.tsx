@@ -113,17 +113,17 @@ const Popup = () => {
 
           {/* HEADING */}
           <div className="text-center">
-            <h2 className="font-ivy text-4xl  text-[#263D25] ">
+            <h2 className="font-ivy md:text-4xl text-2xl  text-[#263D25] ">
               Escape <span className="">THE ORDINARY.</span>
             </h2>
 
-            <p className="mt-1 text-2xl font-light uppercase text-[#C77B32]">
+            <p className="mt-1 md:text-2xl text-lg font-light uppercase text-[#C77B32]">
               YOUR PRIVATE RETREAT AWAITS
             </p>
           </div>
 
           {/* OFFERS */}
-          <div className="mt-5 grid grid-cols-3 divide-x divide-[#C9C5B5]">
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-3 py-2  md:py-0 md:divide-x divide-[#C9C5B5]">
             {/* OFFER 1 */}
             {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
               <div className="flex items-start gap-3">
@@ -148,7 +148,7 @@ const Popup = () => {
                 (per night)
               </p>
             </div> */}
-            <div className="flex items-center justify-center gap-3 px-2 md:pr-10">
+            <div className="flex items-center justify-center gap-3 py-4 md:py-0 px-2 md:pr-10">
               <Image
                 src="/home/offer.png"
                 alt=""
@@ -196,7 +196,7 @@ const Popup = () => {
                 ON YOUR STAY
               </p>
             </div> */}
-            <div className="flex items-center justify-center gap-3 px-2 md:px-0">
+            <div className="flex items-center justify-center gap-3 py-4 px-4 md:py-0 md:px-6">
               <Image
                 src="/home/discount.png"
                 alt=""
@@ -244,8 +244,7 @@ const Popup = () => {
                 FOR ALL GUESTS
               </p>
             </div> */}
-            <div className="flex items-center justify-center gap-3 px-2 md:pl-8">
-               
+            <div className="flex items-center justify-center gap-3 py-4 md:py-0 px-2 md:pl-8">
               <Image
                 src="/home/spoon.png"
                 alt=""
@@ -253,7 +252,6 @@ const Popup = () => {
                 height={60}
                 className="h-[60px] w-[60px] shrink-0 object-contain"
               />
-            
 
               <div className="text-left">
                 <p className="font-montserrat text-sm font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
@@ -272,11 +270,11 @@ const Popup = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-5 flex justify-center">
+          <div className="md:mt-5 flex justify-center">
             <Link
               href="/contact-us"
               onClick={handleClose}
-              className="w-full max-w-[450px] rounded-[3px] bg-[#C87528] px-5 py-2.5 text-center md:text-base font-montserrat uppercase tracking-wide text-white transition-colors duration-300 hover:bg-[#A95F1D] sm:py-3"
+              className="w-full max-w-[450px] rounded-[3px] bg-[#C87528] px-5 py-2.5 text-center text-xs md:text-base font-montserrat uppercase tracking-wide text-white transition-colors duration-300 hover:bg-[#A95F1D] sm:py-3"
             >
               <span className="flex items-center justify-center gap-2">
                 PLAN YOUR GLAMPING ADVENTURE NOW
