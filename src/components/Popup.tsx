@@ -90,28 +90,8 @@ const Popup = () => {
               className="h-auto w-[70px] rotate-180 object-contain"
             />
           </div>
-          {/* LEFT DECORATION */}
-          {/* <div className="absolute left-3 top-5 hidden sm:block">
-            <div className="grid grid-cols-3 gap-1 opacity-60">
-              {Array.from({ length: 12 }).map((_, index) => (
-                <span
-                  key={index}
-                  className="h-[2px] w-[2px] rounded-full bg-[#C69A45]"
-                />
-              ))}
-            </div>
-          </div> */}
-
-          {/* RIGHT DECORATION */}
-          {/* <div className="absolute right-3 top-5 hidden sm:block">
-            <div className="relative h-12 w-8 opacity-60">
-              <span className="absolute left-1/2 top-0 h-12 w-px -translate-x-1/2 rotate-45 bg-[#C69A45]" />
-              <span className="absolute left-1/2 top-0 h-12 w-px -translate-x-1/2 -rotate-45 bg-[#C69A45]" />
-              <span className="absolute left-1/2 top-1/2 h-8 w-px -translate-x-1/2 rotate-90 bg-[#C69A45]" />
-            </div>
-          </div> */}
-
-          {/* HEADING */}
+          
+       
           <div className="text-center">
             <h2 className="font-ivy md:text-4xl text-2xl  text-[#263D25] ">
               Escape <span className="">THE ORDINARY.</span>
@@ -124,30 +104,7 @@ const Popup = () => {
 
           {/* OFFERS */}
           <div className="mt-5 grid grid-cols-1 md:grid-cols-3 py-2  md:py-0 md:divide-x divide-[#C9C5B5]">
-            {/* OFFER 1 */}
-            {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
-              <div className="flex items-start gap-3">
-                <Image
-                  src="/home/offer.png"
-                  alt=""
-                  width={60}
-                  height={60}
-                  className="h-[60px] w-[60px] object-contain shrink-0"
-                />
-              </div>
-
-              <p className="md:text-lg no-wrap font-montserrat font-semibold uppercase leading-tight text-[#20251E] ">
-                PRICES STARTING
-              </p>
-
-              <p className="mt-0.5 text-xl font-bold font-montserrat text-[#263D25] md:text-2xl">
-                ₹11,999*
-              </p>
-
-              <p className="mt-1 text-[9px] text-[#20251E] md:text-sm">
-                (per night)
-              </p>
-            </div> */}
+        
             <div className="flex items-center justify-center gap-3 py-4 md:py-0 px-2 md:pr-10">
               <Image
                 src="/home/offer.png"
@@ -172,30 +129,7 @@ const Popup = () => {
               </div>
             </div>
 
-            {/* OFFER 2 */}
-            {/* <div className="flex flex-col items-center px-2 text-center sm:px-4">
-              <div className="flex items-start gap-3">
-                <Image
-                  src="/home/discount.png"
-                  alt=""
-                  width={60}
-                  height={60}
-                  className="h-[60px] w-[60px] object-contain shrink-0"
-                />
-              </div>
-
-              <p className="text-[10px] font-montserrat font-semibold uppercase leading-tight text-[#20251E] md:text-lg">
-                GET 15%
-              </p>
-
-              <p className="text-xl font-bold font-montserrat leading-none text-[#263D25] md:text-2xl">
-                DISCOUNT
-              </p>
-
-              <p className="mt-1 text-[9px] font-montserrat uppercase leading-tight text-[#20251E] md:text-sm">
-                ON YOUR STAY
-              </p>
-            </div> */}
+         
             <div className="flex items-center justify-center gap-3 py-4 px-4 md:py-0 md:px-6">
               <Image
                 src="/home/discount.png"
@@ -288,17 +222,6 @@ const Popup = () => {
             Offer Valid for a Limited Time. T&Cs apply. Direct bookings only.
           </p>
 
-          {/* BOTTOM DECORATION */}
-          {/* <div className="absolute bottom-2 right-3 hidden sm:block">
-            <div className="grid grid-cols-4 gap-1 opacity-60">
-              {Array.from({ length: 16 }).map((_, index) => (
-                <span
-                  key={index}
-                  className="h-[2px] w-[2px] rounded-full bg-[#C69A45]"
-                />
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
